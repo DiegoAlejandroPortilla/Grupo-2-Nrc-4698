@@ -2,8 +2,8 @@
 	UNIVERSIDAD DE LAS FUERZAS ARMADAS "ESPE"
 	Autores: Diego Portilla 
 			 Darwin Valdiviezo
-	Fecha de creación: 9 de Diciembre del 2022
-	Fecha de modificación: 10 de Diciembre del 2022
+	Fecha de creación: 10 de Mayo del 2022
+	Fecha de modificación: 10 de Mayo del 2022
 	NRC: 4698
 	Nombre de la materia: Estructura de Datos
 */

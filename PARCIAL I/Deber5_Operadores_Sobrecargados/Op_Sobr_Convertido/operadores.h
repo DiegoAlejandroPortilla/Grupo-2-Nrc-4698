@@ -15,9 +15,9 @@ class matriz{
         matriz(int filas, int columnas){
             this->filas = filas;
             this->columnas = columnas;
-            this->m = new int*[filas];//reservamos memoria para las filas
-            for(int i = 0; i < filas; i++){//reservamos memoria para las columnas
-                this->m[i] = new int[columnas];//reservamos memoria para las columnas
+            this->m = new int*[filas];
+            for(int i = 0; i < filas; i++){
+                this->m[i] = new int[columnas];
             }
         }
         matriz(){
@@ -56,9 +56,9 @@ class matriz2{
         matriz2(int filas, int columnas){
             this->filas = filas;
             this->columnas = columnas;
-            this->m = new int*[filas];//reservamos memoria para las filas
-            for(int i = 0; i < filas; i++){//reservamos memoria para las columnas
-                this->m[i] = new int[columnas];//reservamos memoria para las columnas
+            this->m = new int*[filas];
+            for(int i = 0; i < filas; i++){
+                this->m[i] = new int[columnas];
             }
         }
         matriz2(){
@@ -106,9 +106,9 @@ class matriz3{
         matriz3(int filas, int columnas){
             this->filas = filas;
             this->columnas = columnas;
-            this->m = new int*[filas];//reservamos memoria para las filas
+            this->m = new int*[filas];
             for(int i = 0; i < filas; i++){
-                this->m[i] = new int[columnas];//reservamos memoria para las columnas
+                this->m[i] = new int[columnas];
             }
         }
         matriz3(){

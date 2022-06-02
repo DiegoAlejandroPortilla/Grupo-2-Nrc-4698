@@ -1,9 +1,9 @@
 /*
 	UNIVERSIDAD DE LAS FUERZAS ARMADAS "ESPE"
-	Autores: Grupo N°2
+	Autores: Grupo Nï¿½2
              Diego Portilla
 			 Darwin Valdiviezo
-			 Grupo N°19
+			 Grupo Nï¿½19
 			 Danny Quingaluisa
 			 Alejandro Gallegos
 	NRC: 4698
@@ -20,8 +20,11 @@
 #include "operadores.cpp"
 using namespace std;
 
+
 int main(){
+    
     int opcion;
+do{
     cout<<"Bienvenido al programa de sobrecarga de operadores"<<endl;
     cout<<"Bienvenido al programa seleccione una opcion "<<endl;
     cout <<"1. *"<<endl;
@@ -44,7 +47,9 @@ int main(){
             p1.imprimir();
             p3.imprimir();
             p4.imprimir();
+            system ("pause");
             return 0;
+        
     }else{
         if(opcion==2){
             int filas;
@@ -64,7 +69,10 @@ int main(){
                 }
             }
             m1.imprimir();
+            system ("pause");
             return 0;
+        
+           
         }else{
             if(opcion==3){
                     int filas;
@@ -88,8 +96,10 @@ int main(){
                     cout<<"Matriz 2 efectuando la sobrecarga del operador /"<<endl;
                     matriz2 m2 = m1/2;//sobrecarga del operador /
                     m2.imprimir();//imprimimos la matriz
+                    system ("pause");
                     return 0;
                 return 0;
+                
             }else{
                 if(opcion==4){
                     int filas;
@@ -113,15 +123,28 @@ int main(){
                     cout<<"Matriz 2 efectuando la sobrecarga del operador %="<<endl;
                     m1 %= 2;//sobrecarga del operador %=
                     m1.imprimir();//imprimimos la matriz
+                    system ("pause");
                     return 0;
+                    
                 }else{
                     cout<<"Opcion no valida"<<endl;
+                    system ("pause");
+                    
                     return 0;
+                    
                 }
+                
+                
 
             }
-
+            
+            
 
         }
+        
+    
     }
+    system ("cls");
+    }while(opcion != 4);
+    return 0;
 }

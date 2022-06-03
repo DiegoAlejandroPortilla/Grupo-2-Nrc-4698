@@ -1,3 +1,11 @@
+/*
+	UNIVERSIDAD DE LAS FUERZAS ARMADAS "ESPE"
+	Autores: Diego Portilla
+			 Darwin Valdiviezo
+	NRC: 4698
+	Nombre de la materia: Estructura de Datos
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -14,6 +22,6 @@ int main(int argc, char** argv) {
     scanf("%d",&val);
     b1.decimaBinario(val,cad);
     b1.imprimir(val,*cad1);
-    printf("\n");   
+    printf("\n");
     return 0;
 }

@@ -1,0 +1,229 @@
+\hypertarget{operaciones_8h}{}\doxysection{operaciones.\+h File Reference}
+\label{operaciones_8h}\index{operaciones.h@{operaciones.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}celular.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Cliente.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{operaciones_8h_a959a9e55cb4bbb2bdbb7f6bccaaeb30b}{validar\+Numero\+Serie}} (string \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numero\+Serie}})
+\item 
+bool \mbox{\hyperlink{operaciones_8h_a8b7d6df0a5c5370062d569818fa7e1cb}{is\+Number}} (string str)
+\item 
+bool \mbox{\hyperlink{operaciones_8h_a58bb3024f024a82c79bce5e2ac5bdf5d}{validar\+Numero\+Telefono}} (string numero)
+\item 
+bool \mbox{\hyperlink{operaciones_8h_a72ddd2841edd95cd72e6f25ceb526a6e}{validar\+Letras}} (string cadena)
+\item 
+bool \mbox{\hyperlink{operaciones_8h_a69c9ad5ceab966e8c40f7b1cf19ba527}{is\+Alpha}} (string cadena)
+\item 
+bool \mbox{\hyperlink{operaciones_8h_a44116cb9085419182602a18a48096612}{validar\+Marcade\+Celular}} (string marca)
+\item 
+bool \mbox{\hyperlink{operaciones_8h_a347fb061fb39279c947350d68d3f72e1}{validar\+Telefono}} (string cadena)
+\item 
+bool \mbox{\hyperlink{operaciones_8h_a8bf61134df13ff3cbb5b251e8341ad08}{validate\+\_\+id}} (string cedula)
+\item 
+bool \mbox{\hyperlink{operaciones_8h_a014a565a37a3c47629c41d37c4fbcd7d}{buscar\+Numerode\+Serie}} (vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra, string \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numero\+Serie}})
+\item 
+void \mbox{\hyperlink{operaciones_8h_aed49a7805e296fb99b9a0971a6348864}{comprar\+Celular}} (vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra)
+\item 
+void \mbox{\hyperlink{operaciones_8h_ad46088c23a1d3bc916be6b3e08ec0d55}{imprimir\+Celular}} (vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra)
+\item 
+bool \mbox{\hyperlink{operaciones_8h_ab890696a42097d5939201fcc89ff7bc1}{buscar\+Cedula}} (vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&venta, string cedula)
+\item 
+bool \mbox{\hyperlink{operaciones_8h_aa9e2a69816b0ce15d244207a191fd0ad}{buscar\+Numero\+Serie}} (vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra, string \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numero\+Serie}})
+\item 
+void \mbox{\hyperlink{operaciones_8h_ad3adec250f0d3c0ac382b59800801d12}{vender\+Celular}} (vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&venta, vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra)
+\item 
+void \mbox{\hyperlink{operaciones_8h_a9d3d8d1124fbc540fbcc096971ebf23f}{imprimir\+Ventas}} (vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&venta)
+\item 
+void \mbox{\hyperlink{operaciones_8h_aa683a84baf539580cbf6f492e7a4a554}{buscar\+Celularesde\+Un\+Cliente}} (vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&venta)
+\item 
+void \mbox{\hyperlink{operaciones_8h_ac33e840b8095d712fca2583c524fbcdc}{buscar\+Celular}} (vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra)
+\item 
+void \mbox{\hyperlink{operaciones_8h_a5f86a9b8c8d5a77ce2266004261b6076}{modificar\+Celular}} (vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra)
+\item 
+void \mbox{\hyperlink{operaciones_8h_aff18d0770b3dddb901d7ad77a54fab2f}{modificar\+Cliente}} (vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&venta)
+\item 
+void \mbox{\hyperlink{operaciones_8h_a9a0a3cf14c6d5b096037beaa60b135ae}{guardar\+Txt}} (vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra)
+\item 
+void \mbox{\hyperlink{operaciones_8h_abadc01567cdaab6782a37c897c62d547}{guardar\+Bin}} (vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra)
+\item 
+void \mbox{\hyperlink{operaciones_8h_a18035314a7cf331cf0fe8c740e309d4b}{guardar\+Cliente\+Txt}} (vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&venta, vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra)
+\item 
+void \mbox{\hyperlink{operaciones_8h_ae9f4cd1db15e5d63f4d72e0255a10f91}{guardar\+Cliente\+Bin}} (vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&venta, vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra)
+\item 
+void \mbox{\hyperlink{operaciones_8h_a5241b8027217bce8dd89abd27dc82b4a}{crear\+Archivo}} (vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&compra, vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&venta)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{operaciones_8h_a39f485a4773f634607a5caf635218a32}{opcion}}
+\item 
+string \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numero\+Serie}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{operaciones_8h_ab890696a42097d5939201fcc89ff7bc1}\label{operaciones_8h_ab890696a42097d5939201fcc89ff7bc1}} 
+\index{operaciones.h@{operaciones.h}!buscarCedula@{buscarCedula}}
+\index{buscarCedula@{buscarCedula}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{buscarCedula()}{buscarCedula()}}
+{\footnotesize\ttfamily bool buscar\+Cedula (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&}]{venta,  }\item[{string}]{cedula }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_ac33e840b8095d712fca2583c524fbcdc}\label{operaciones_8h_ac33e840b8095d712fca2583c524fbcdc}} 
+\index{operaciones.h@{operaciones.h}!buscarCelular@{buscarCelular}}
+\index{buscarCelular@{buscarCelular}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{buscarCelular()}{buscarCelular()}}
+{\footnotesize\ttfamily void buscar\+Celular (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_aa683a84baf539580cbf6f492e7a4a554}\label{operaciones_8h_aa683a84baf539580cbf6f492e7a4a554}} 
+\index{operaciones.h@{operaciones.h}!buscarCelularesdeUnCliente@{buscarCelularesdeUnCliente}}
+\index{buscarCelularesdeUnCliente@{buscarCelularesdeUnCliente}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{buscarCelularesdeUnCliente()}{buscarCelularesdeUnCliente()}}
+{\footnotesize\ttfamily void buscar\+Celularesde\+Un\+Cliente (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&}]{venta }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a014a565a37a3c47629c41d37c4fbcd7d}\label{operaciones_8h_a014a565a37a3c47629c41d37c4fbcd7d}} 
+\index{operaciones.h@{operaciones.h}!buscarNumerodeSerie@{buscarNumerodeSerie}}
+\index{buscarNumerodeSerie@{buscarNumerodeSerie}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{buscarNumerodeSerie()}{buscarNumerodeSerie()}}
+{\footnotesize\ttfamily bool buscar\+Numerode\+Serie (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra,  }\item[{string}]{numero\+Serie }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_aa9e2a69816b0ce15d244207a191fd0ad}\label{operaciones_8h_aa9e2a69816b0ce15d244207a191fd0ad}} 
+\index{operaciones.h@{operaciones.h}!buscarNumeroSerie@{buscarNumeroSerie}}
+\index{buscarNumeroSerie@{buscarNumeroSerie}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{buscarNumeroSerie()}{buscarNumeroSerie()}}
+{\footnotesize\ttfamily bool buscar\+Numero\+Serie (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra,  }\item[{string}]{numero\+Serie }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_aed49a7805e296fb99b9a0971a6348864}\label{operaciones_8h_aed49a7805e296fb99b9a0971a6348864}} 
+\index{operaciones.h@{operaciones.h}!comprarCelular@{comprarCelular}}
+\index{comprarCelular@{comprarCelular}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{comprarCelular()}{comprarCelular()}}
+{\footnotesize\ttfamily void comprar\+Celular (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a5241b8027217bce8dd89abd27dc82b4a}\label{operaciones_8h_a5241b8027217bce8dd89abd27dc82b4a}} 
+\index{operaciones.h@{operaciones.h}!crearArchivo@{crearArchivo}}
+\index{crearArchivo@{crearArchivo}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{crearArchivo()}{crearArchivo()}}
+{\footnotesize\ttfamily void crear\+Archivo (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra,  }\item[{vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&}]{venta }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_abadc01567cdaab6782a37c897c62d547}\label{operaciones_8h_abadc01567cdaab6782a37c897c62d547}} 
+\index{operaciones.h@{operaciones.h}!guardarBin@{guardarBin}}
+\index{guardarBin@{guardarBin}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{guardarBin()}{guardarBin()}}
+{\footnotesize\ttfamily void guardar\+Bin (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_ae9f4cd1db15e5d63f4d72e0255a10f91}\label{operaciones_8h_ae9f4cd1db15e5d63f4d72e0255a10f91}} 
+\index{operaciones.h@{operaciones.h}!guardarClienteBin@{guardarClienteBin}}
+\index{guardarClienteBin@{guardarClienteBin}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{guardarClienteBin()}{guardarClienteBin()}}
+{\footnotesize\ttfamily void guardar\+Cliente\+Bin (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&}]{venta,  }\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a18035314a7cf331cf0fe8c740e309d4b}\label{operaciones_8h_a18035314a7cf331cf0fe8c740e309d4b}} 
+\index{operaciones.h@{operaciones.h}!guardarClienteTxt@{guardarClienteTxt}}
+\index{guardarClienteTxt@{guardarClienteTxt}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{guardarClienteTxt()}{guardarClienteTxt()}}
+{\footnotesize\ttfamily void guardar\+Cliente\+Txt (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&}]{venta,  }\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a9a0a3cf14c6d5b096037beaa60b135ae}\label{operaciones_8h_a9a0a3cf14c6d5b096037beaa60b135ae}} 
+\index{operaciones.h@{operaciones.h}!guardarTxt@{guardarTxt}}
+\index{guardarTxt@{guardarTxt}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{guardarTxt()}{guardarTxt()}}
+{\footnotesize\ttfamily void guardar\+Txt (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_ad46088c23a1d3bc916be6b3e08ec0d55}\label{operaciones_8h_ad46088c23a1d3bc916be6b3e08ec0d55}} 
+\index{operaciones.h@{operaciones.h}!imprimirCelular@{imprimirCelular}}
+\index{imprimirCelular@{imprimirCelular}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{imprimirCelular()}{imprimirCelular()}}
+{\footnotesize\ttfamily void imprimir\+Celular (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a9d3d8d1124fbc540fbcc096971ebf23f}\label{operaciones_8h_a9d3d8d1124fbc540fbcc096971ebf23f}} 
+\index{operaciones.h@{operaciones.h}!imprimirVentas@{imprimirVentas}}
+\index{imprimirVentas@{imprimirVentas}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{imprimirVentas()}{imprimirVentas()}}
+{\footnotesize\ttfamily void imprimir\+Ventas (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&}]{venta }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a69c9ad5ceab966e8c40f7b1cf19ba527}\label{operaciones_8h_a69c9ad5ceab966e8c40f7b1cf19ba527}} 
+\index{operaciones.h@{operaciones.h}!isAlpha@{isAlpha}}
+\index{isAlpha@{isAlpha}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{isAlpha()}{isAlpha()}}
+{\footnotesize\ttfamily bool is\+Alpha (\begin{DoxyParamCaption}\item[{string}]{cadena }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a8b7d6df0a5c5370062d569818fa7e1cb}\label{operaciones_8h_a8b7d6df0a5c5370062d569818fa7e1cb}} 
+\index{operaciones.h@{operaciones.h}!isNumber@{isNumber}}
+\index{isNumber@{isNumber}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{isNumber()}{isNumber()}}
+{\footnotesize\ttfamily bool is\+Number (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a5f86a9b8c8d5a77ce2266004261b6076}\label{operaciones_8h_a5f86a9b8c8d5a77ce2266004261b6076}} 
+\index{operaciones.h@{operaciones.h}!modificarCelular@{modificarCelular}}
+\index{modificarCelular@{modificarCelular}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{modificarCelular()}{modificarCelular()}}
+{\footnotesize\ttfamily void modificar\+Celular (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_aff18d0770b3dddb901d7ad77a54fab2f}\label{operaciones_8h_aff18d0770b3dddb901d7ad77a54fab2f}} 
+\index{operaciones.h@{operaciones.h}!modificarCliente@{modificarCliente}}
+\index{modificarCliente@{modificarCliente}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{modificarCliente()}{modificarCliente()}}
+{\footnotesize\ttfamily void modificar\+Cliente (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&}]{venta }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a72ddd2841edd95cd72e6f25ceb526a6e}\label{operaciones_8h_a72ddd2841edd95cd72e6f25ceb526a6e}} 
+\index{operaciones.h@{operaciones.h}!validarLetras@{validarLetras}}
+\index{validarLetras@{validarLetras}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{validarLetras()}{validarLetras()}}
+{\footnotesize\ttfamily bool validar\+Letras (\begin{DoxyParamCaption}\item[{string}]{cadena }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a44116cb9085419182602a18a48096612}\label{operaciones_8h_a44116cb9085419182602a18a48096612}} 
+\index{operaciones.h@{operaciones.h}!validarMarcadeCelular@{validarMarcadeCelular}}
+\index{validarMarcadeCelular@{validarMarcadeCelular}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{validarMarcadeCelular()}{validarMarcadeCelular()}}
+{\footnotesize\ttfamily bool validar\+Marcade\+Celular (\begin{DoxyParamCaption}\item[{string}]{marca }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a959a9e55cb4bbb2bdbb7f6bccaaeb30b}\label{operaciones_8h_a959a9e55cb4bbb2bdbb7f6bccaaeb30b}} 
+\index{operaciones.h@{operaciones.h}!validarNumeroSerie@{validarNumeroSerie}}
+\index{validarNumeroSerie@{validarNumeroSerie}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{validarNumeroSerie()}{validarNumeroSerie()}}
+{\footnotesize\ttfamily bool validar\+Numero\+Serie (\begin{DoxyParamCaption}\item[{string}]{numero\+Serie }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a58bb3024f024a82c79bce5e2ac5bdf5d}\label{operaciones_8h_a58bb3024f024a82c79bce5e2ac5bdf5d}} 
+\index{operaciones.h@{operaciones.h}!validarNumeroTelefono@{validarNumeroTelefono}}
+\index{validarNumeroTelefono@{validarNumeroTelefono}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{validarNumeroTelefono()}{validarNumeroTelefono()}}
+{\footnotesize\ttfamily bool validar\+Numero\+Telefono (\begin{DoxyParamCaption}\item[{string}]{numero }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a347fb061fb39279c947350d68d3f72e1}\label{operaciones_8h_a347fb061fb39279c947350d68d3f72e1}} 
+\index{operaciones.h@{operaciones.h}!validarTelefono@{validarTelefono}}
+\index{validarTelefono@{validarTelefono}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{validarTelefono()}{validarTelefono()}}
+{\footnotesize\ttfamily bool validar\+Telefono (\begin{DoxyParamCaption}\item[{string}]{cadena }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_a8bf61134df13ff3cbb5b251e8341ad08}\label{operaciones_8h_a8bf61134df13ff3cbb5b251e8341ad08}} 
+\index{operaciones.h@{operaciones.h}!validate\_id@{validate\_id}}
+\index{validate\_id@{validate\_id}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{validate\_id()}{validate\_id()}}
+{\footnotesize\ttfamily bool validate\+\_\+id (\begin{DoxyParamCaption}\item[{string}]{cedula }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operaciones_8h_ad3adec250f0d3c0ac382b59800801d12}\label{operaciones_8h_ad3adec250f0d3c0ac382b59800801d12}} 
+\index{operaciones.h@{operaciones.h}!venderCelular@{venderCelular}}
+\index{venderCelular@{venderCelular}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{venderCelular()}{venderCelular()}}
+{\footnotesize\ttfamily void vender\+Celular (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classcliente}{cliente}} $>$ \&}]{venta,  }\item[{vector$<$ \mbox{\hyperlink{classcelular}{celular}} $>$ \&}]{compra }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}\label{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}} 
+\index{operaciones.h@{operaciones.h}!numeroSerie@{numeroSerie}}
+\index{numeroSerie@{numeroSerie}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{numeroSerie}{numeroSerie}}
+{\footnotesize\ttfamily string numero\+Serie}
+
+\mbox{\Hypertarget{operaciones_8h_a39f485a4773f634607a5caf635218a32}\label{operaciones_8h_a39f485a4773f634607a5caf635218a32}} 
+\index{operaciones.h@{operaciones.h}!opcion@{opcion}}
+\index{opcion@{opcion}!operaciones.h@{operaciones.h}}
+\doxysubsubsection{\texorpdfstring{opcion}{opcion}}
+{\footnotesize\ttfamily int opcion}
+

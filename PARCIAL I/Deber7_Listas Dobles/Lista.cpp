@@ -115,7 +115,7 @@ void Lista :: imprimir(){
     if(this->primero != NULL){
         Nodo* actual = this->primero;
         while(actual != NULL){
-            cout << actual->getDato() << "->";
+            cout << actual->getDato() << "<->";
             actual = actual->getSiguiente();
 
         }

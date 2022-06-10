@@ -1,0 +1,35 @@
+﻿  main.cpp
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(34): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(54): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(62): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(82): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(97): warning C4101: 'temp': variable local sin referencia
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(141): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(203): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(214): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(227): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(250): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(259): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(303): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(322): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(343): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(369): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(397): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(424): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(436): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(451): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(466): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(503): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(530): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(546): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(562): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(578): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(614): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(626): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(639): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(652): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(653): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(679): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\operaciones.h(700): warning C4018: '<': no coinciden signed/unsigned
+c:\users\diego portilla\desktop\proyecto\proyecto\proyecto\registro.h(90): warning C4101: 'option': variable local sin referencia
+  Proyecto.vcxproj -> C:\Users\Diego Portilla\Desktop\Proyecto\Proyecto\Debug\Proyecto.exe

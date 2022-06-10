@@ -1,0 +1,653 @@
+\hypertarget{operaciones_8h_source}{}\doxysection{operaciones.\+h}
+\mbox{\hyperlink{operaciones_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{comment}{/*}}
+\DoxyCodeLine{3 \textcolor{comment}{* @flie operaciones.h}}
+\DoxyCodeLine{4 \textcolor{comment}{* @author Diego Portilla -\/ Darwin Valdiviezo -\/ Estructura de Datos}}
+\DoxyCodeLine{5 \textcolor{comment}{* @date 9/6/2022}}
+\DoxyCodeLine{6 \textcolor{comment}{* @brief Archivo de cabecera para la clase operaciones}}
+\DoxyCodeLine{7 \textcolor{comment}{* @version 1.0}}
+\DoxyCodeLine{8 \textcolor{comment}{* }}
+\DoxyCodeLine{9 \textcolor{comment}{*@copyright Copyright (c) 2022,Diego Portilla -\/ Darwin Valdiviezo}}
+\DoxyCodeLine{10 \textcolor{comment}{*@license MIT License}}
+\DoxyCodeLine{11 \textcolor{comment}{*/}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{celular_8h}{celular.h}}"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_cliente_8h}{Cliente.h}}"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{22 \textcolor{keywordtype}{int} \mbox{\hyperlink{operaciones_8h_a39f485a4773f634607a5caf635218a32}{opcion}};}
+\DoxyCodeLine{23 \textcolor{keywordtype}{string} \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}};}
+\DoxyCodeLine{24 \textcolor{keywordtype}{bool} \mbox{\hyperlink{operaciones_8h_a959a9e55cb4bbb2bdbb7f6bccaaeb30b}{validarNumeroSerie}}(\textcolor{keywordtype}{string} \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}})\{}
+\DoxyCodeLine{25     \textcolor{keywordflow}{if}(\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}}.length() == 12)\{}
+\DoxyCodeLine{26         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{29         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31 \}}
+\DoxyCodeLine{32 \textcolor{keywordtype}{bool} \mbox{\hyperlink{operaciones_8h_a8b7d6df0a5c5370062d569818fa7e1cb}{isNumber}}(\textcolor{keywordtype}{string} str) \{}
+\DoxyCodeLine{33     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < str.length(); i++) \{}
+\DoxyCodeLine{34         \textcolor{keywordflow}{if} (str[i] < \textcolor{charliteral}{'0'} || str[i] > \textcolor{charliteral}{'9'}) \{}
+\DoxyCodeLine{35             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{36         \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39     }
+\DoxyCodeLine{40     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{41 \}}
+\DoxyCodeLine{42 \textcolor{keywordtype}{bool} \mbox{\hyperlink{operaciones_8h_a58bb3024f024a82c79bce5e2ac5bdf5d}{validarNumeroTelefono}}(\textcolor{keywordtype}{string} numero) \{}
+\DoxyCodeLine{43     \textcolor{keywordflow}{if} (numero.length() != 10) \{}
+\DoxyCodeLine{44         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{45     \}}
+\DoxyCodeLine{46     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{operaciones_8h_a8b7d6df0a5c5370062d569818fa7e1cb}{isNumber}}(numero)) \{}
+\DoxyCodeLine{47         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{50 \}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keywordtype}{bool} \mbox{\hyperlink{operaciones_8h_a72ddd2841edd95cd72e6f25ceb526a6e}{validarLetras}}(\textcolor{keywordtype}{string} cadena)\{}
+\DoxyCodeLine{53     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<cadena.length();i++)\{}
+\DoxyCodeLine{54         \textcolor{keywordflow}{if}(!isalpha(cadena[i]))\{}
+\DoxyCodeLine{55             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{56         \}}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{59 \}}
+\DoxyCodeLine{60 \textcolor{keywordtype}{bool} \mbox{\hyperlink{operaciones_8h_a69c9ad5ceab966e8c40f7b1cf19ba527}{isAlpha}}(\textcolor{keywordtype}{string} cadena)\{}
+\DoxyCodeLine{61     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<cadena.length();i++)\{}
+\DoxyCodeLine{62         \textcolor{keywordflow}{if}(!isalpha(cadena[i]))\{}
+\DoxyCodeLine{63             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{64         \}}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{67 \}}
+\DoxyCodeLine{68 \textcolor{keywordtype}{bool} \mbox{\hyperlink{operaciones_8h_a44116cb9085419182602a18a48096612}{validarMarcadeCelular}}(\textcolor{keywordtype}{string} marca)\{}
+\DoxyCodeLine{69     \textcolor{keywordflow}{if}(marca == \textcolor{stringliteral}{"{}Samsung"{}} ||marca == \textcolor{stringliteral}{"{}samsung"{}}|| marca == \textcolor{stringliteral}{"{}Apple"{}} || marca == \textcolor{stringliteral}{"{}apple"{}} || marca == \textcolor{stringliteral}{"{}Huawei"{}} || marca == \textcolor{stringliteral}{"{}huawei"{}}  || marca == \textcolor{stringliteral}{"{}Xiaomi"{}} ||marca == \textcolor{stringliteral}{"{}xiaomi"{}} || marca == \textcolor{stringliteral}{"{}LG"{}} ||marca == \textcolor{stringliteral}{"{}lg"{}} || marca == \textcolor{stringliteral}{"{}Motorola"{}} ||marca == \textcolor{stringliteral}{"{}motorola"{}} || marca == \textcolor{stringliteral}{"{}Sony"{}}||marca == \textcolor{stringliteral}{"{}sony"{}}|| marca == \textcolor{stringliteral}{"{}Nokia"{}} ||marca == \textcolor{stringliteral}{"{}nokia"{}}|| marca == \textcolor{stringliteral}{"{}Otro"{}}||marca == \textcolor{stringliteral}{"{}otro"{}})\{}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{73 \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{keywordtype}{bool} \mbox{\hyperlink{operaciones_8h_a347fb061fb39279c947350d68d3f72e1}{validarTelefono}}(\textcolor{keywordtype}{string} cadena)\{}
+\DoxyCodeLine{78     \textcolor{keywordflow}{if}(cadena.length()!=10)\{}
+\DoxyCodeLine{79         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<cadena.length();i++)\{}
+\DoxyCodeLine{82         \textcolor{keywordflow}{if}(!isdigit(cadena[i]))\{}
+\DoxyCodeLine{83             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{84         \}}
+\DoxyCodeLine{85     \}}
+\DoxyCodeLine{86     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{87 \}}
+\DoxyCodeLine{88 \textcolor{keywordtype}{bool} \mbox{\hyperlink{operaciones_8h_a8bf61134df13ff3cbb5b251e8341ad08}{validate\_id}}(\textcolor{keywordtype}{string} cedula)\{}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90     \textcolor{keywordflow}{if} (cedula.length() != 10)}
+\DoxyCodeLine{91     \{}
+\DoxyCodeLine{92         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{93     \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     \textcolor{keywordtype}{int} temp;}
+\DoxyCodeLine{96     \textcolor{keywordtype}{int} sum\_par = 0;}
+\DoxyCodeLine{97     \textcolor{keywordtype}{int} sum\_impar = 0;}
+\DoxyCodeLine{98     \textcolor{keywordtype}{int} sum;}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \textcolor{keywordtype}{int} i = 1;}
+\DoxyCodeLine{101     std::string digits = cedula.substr(0, cedula.size() -\/ 1);}
+\DoxyCodeLine{102     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{char} \& c : digits)}
+\DoxyCodeLine{103     \{}
+\DoxyCodeLine{104         \textcolor{keywordtype}{int} digit = c -\/ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{105         \textcolor{keywordflow}{if} (i \% 2 == 0) \{}
+\DoxyCodeLine{106             sum\_par += digit;}
+\DoxyCodeLine{107         \}}
+\DoxyCodeLine{108         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{109             \textcolor{keywordflow}{if} ((digit * 2) > 9)}
+\DoxyCodeLine{110             \{}
+\DoxyCodeLine{111                 sum\_impar += (digit * 2) -\/ 9;}
+\DoxyCodeLine{112             \}}
+\DoxyCodeLine{113             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{114             \{}
+\DoxyCodeLine{115                 sum\_impar += (digit * 2);}
+\DoxyCodeLine{116             \}}
+\DoxyCodeLine{117         \}}
+\DoxyCodeLine{118         i++;}
+\DoxyCodeLine{119     \}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121     sum = sum\_par + sum\_impar;}
+\DoxyCodeLine{122     \textcolor{keywordtype}{int} verifier = cedula.at(cedula.size() -\/1) -\/ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{123     \textcolor{keywordtype}{int} higher = (10 -\/ (sum \% 10)) + sum;}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125     \textcolor{keywordflow}{if} (sum \% 10 == 0)}
+\DoxyCodeLine{126     \{}
+\DoxyCodeLine{127         \textcolor{keywordflow}{return} verifier != 0;}
+\DoxyCodeLine{128     \}}
+\DoxyCodeLine{129     \textcolor{keywordflow}{if} ((higher -\/sum) == verifier) \{}
+\DoxyCodeLine{130         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{131     \}}
+\DoxyCodeLine{132     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{133         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nLa cedula ingresada es invalida"{}} << std::endl;}
+\DoxyCodeLine{134         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{135     \}}
+\DoxyCodeLine{136 \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 \textcolor{keywordtype}{bool} \mbox{\hyperlink{operaciones_8h_a014a565a37a3c47629c41d37c4fbcd7d}{buscarNumerodeSerie}}(vector<celular> \&compra, \textcolor{keywordtype}{string} \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}})\{}
+\DoxyCodeLine{139     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141         \textcolor{keywordflow}{if}(\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}} == compra[i].getnSerie())\{}
+\DoxyCodeLine{142             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{143             }
+\DoxyCodeLine{144         \}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146     \}}
+\DoxyCodeLine{147     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \}}
+\DoxyCodeLine{150 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_aed49a7805e296fb99b9a0971a6348864}{comprarCelular}}(vector<celular> \&compra)\{}
+\DoxyCodeLine{151     \textcolor{keywordtype}{string} marca , modelo , color ;}
+\DoxyCodeLine{152     cout<<\textcolor{stringliteral}{"{}Ingrese el numero de serie:"{}};}
+\DoxyCodeLine{153     cin>>\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}};}
+\DoxyCodeLine{154     \textcolor{keywordflow}{while}(!\mbox{\hyperlink{operaciones_8h_a959a9e55cb4bbb2bdbb7f6bccaaeb30b}{validarNumeroSerie}}(\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}}))\{}
+\DoxyCodeLine{155         cout<<\textcolor{stringliteral}{"{}El numero de serie debe tener 12 caracteres"{}}<<endl;}
+\DoxyCodeLine{156         cout<<\textcolor{stringliteral}{"{}Ingrese el numero de serie:"{}};}
+\DoxyCodeLine{157         cin>>\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}};}
+\DoxyCodeLine{158     \}}
+\DoxyCodeLine{159     \textcolor{keywordflow}{while}(\mbox{\hyperlink{operaciones_8h_a014a565a37a3c47629c41d37c4fbcd7d}{buscarNumerodeSerie}}(compra,\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}}))\{}
+\DoxyCodeLine{160         cout<<\textcolor{stringliteral}{"{}Numero de serie existente"{}}<<endl;}
+\DoxyCodeLine{161         cout<<\textcolor{stringliteral}{"{}No puede exister dos o mas celulares con el mismo numero de serie"{}}<<endl;}
+\DoxyCodeLine{162         cout<<\textcolor{stringliteral}{"{}Ingrese el numero de serie:"{}};}
+\DoxyCodeLine{163         cin>>\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}};}
+\DoxyCodeLine{164     \}}
+\DoxyCodeLine{165     cout<<\textcolor{stringliteral}{"{}\(\backslash\)tMarcas disponibles: Samsung, Apple, Xiaomi, Huawei , LG, Motorola, Sony, Nokia, Otro"{}}<<endl;}
+\DoxyCodeLine{166     cout << \textcolor{stringliteral}{"{}Ingrese marca: "{}};}
+\DoxyCodeLine{167     cin >> marca;}
+\DoxyCodeLine{168     }
+\DoxyCodeLine{169     \textcolor{keywordflow}{while}(!\mbox{\hyperlink{operaciones_8h_a44116cb9085419182602a18a48096612}{validarMarcadeCelular}}(marca))\{}
+\DoxyCodeLine{170         cout << \textcolor{stringliteral}{"{}Ingrese marca: "{}}<<endl;}
+\DoxyCodeLine{171         cin >> marca;}
+\DoxyCodeLine{172         }
+\DoxyCodeLine{173     \}}
+\DoxyCodeLine{174     cout << \textcolor{stringliteral}{"{}Ingrese modelo: "{}};}
+\DoxyCodeLine{175     cin.ignore();}
+\DoxyCodeLine{176     getline(cin, modelo);}
+\DoxyCodeLine{177     cout << \textcolor{stringliteral}{"{}Ingrese color: "{}};}
+\DoxyCodeLine{178     fflush(stdin);}
+\DoxyCodeLine{179     cin.ignore();}
+\DoxyCodeLine{180     getline(cin, color);}
+\DoxyCodeLine{181     \mbox{\hyperlink{classcelular}{celular}} cel(\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}},marca,modelo,color);}
+\DoxyCodeLine{182     compra.push\_back(cel);}
+\DoxyCodeLine{183     }
+\DoxyCodeLine{184 \}}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_ad46088c23a1d3bc916be6b3e08ec0d55}{imprimirCelular}}(vector<celular> \&compra)\{}
+\DoxyCodeLine{187     \textcolor{keywordflow}{if}(compra.size() == NULL)\{}
+\DoxyCodeLine{188         cout << \textcolor{stringliteral}{"{}lista vacia"{}} << endl;}
+\DoxyCodeLine{189     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{190         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{191             cout << \textcolor{stringliteral}{"{}******************************"{}} << endl;}
+\DoxyCodeLine{192             cout <<\textcolor{stringliteral}{"{}Modelo:"{}} << compra[i].getModelo() << endl;}
+\DoxyCodeLine{193             cout <<\textcolor{stringliteral}{"{}Marca:"{}}<< compra[i].getMarca()<<endl;}
+\DoxyCodeLine{194             cout <<\textcolor{stringliteral}{"{}Numero de Serie:"{}} << compra[i].getnSerie() << endl;}
+\DoxyCodeLine{195             cout <<\textcolor{stringliteral}{"{}Color:"{}}<< compra[i].getColor() <<endl;}
+\DoxyCodeLine{196         \}}
+\DoxyCodeLine{197     \}}
+\DoxyCodeLine{198 \}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 \textcolor{keywordtype}{bool} \mbox{\hyperlink{operaciones_8h_ab890696a42097d5939201fcc89ff7bc1}{buscarCedula}}(vector<cliente> \&venta, \textcolor{keywordtype}{string} cedula)\{}
+\DoxyCodeLine{201     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203         \textcolor{keywordflow}{if}(cedula == venta[i].getnCedula())\{}
+\DoxyCodeLine{204             cout << \textcolor{stringliteral}{"{}Se encontro"{}} << endl;}
+\DoxyCodeLine{205             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{206             }
+\DoxyCodeLine{207         \}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209     \}}
+\DoxyCodeLine{210     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212 \}}
+\DoxyCodeLine{213 \textcolor{keywordtype}{bool} \mbox{\hyperlink{operaciones_8h_aa9e2a69816b0ce15d244207a191fd0ad}{buscarNumeroSerie}}(vector<celular> \&compra, \textcolor{keywordtype}{string} \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}})\{}
+\DoxyCodeLine{214     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216         \textcolor{keywordflow}{if}(\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}} == compra[i].getnSerie())\{}
+\DoxyCodeLine{217             cout << \textcolor{stringliteral}{"{}Se encontro"{}} << endl;}
+\DoxyCodeLine{218             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{219             }
+\DoxyCodeLine{220         \}}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222     \}}
+\DoxyCodeLine{223     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225 \}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_ad3adec250f0d3c0ac382b59800801d12}{venderCelular}}(vector<cliente> \&venta , vector<celular> \&compra)\{}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229     \textcolor{keywordtype}{string}  nombre , apellido , cedula ,telefono , nuevoNumeroSerie , nuevoModelo , nuevoColor, nuevoMarca; }
+\DoxyCodeLine{230     cout << \textcolor{stringliteral}{"{}Ingrese el numero de Serie del celular a vender: "{}};}
+\DoxyCodeLine{231     cin >> \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}};}
+\DoxyCodeLine{232     \textcolor{keywordflow}{while} (\mbox{\hyperlink{operaciones_8h_aa9e2a69816b0ce15d244207a191fd0ad}{buscarNumeroSerie}}(compra, \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}}) == \textcolor{keyword}{false})\{}
+\DoxyCodeLine{233         cout << \textcolor{stringliteral}{"{}Numero de serie no encontrado"{}} << endl;}
+\DoxyCodeLine{234         cout << \textcolor{stringliteral}{"{}Ingrese el numero de Serie del celular a vender: "{}};}
+\DoxyCodeLine{235         cin >> \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}};}
+\DoxyCodeLine{236     \}}
+\DoxyCodeLine{237     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{238         \textcolor{keywordflow}{if}(\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}} == compra[i].getnSerie())\{}
+\DoxyCodeLine{239             nuevoNumeroSerie = compra[i].getnSerie();}
+\DoxyCodeLine{240             nuevoModelo = compra[i].getModelo();}
+\DoxyCodeLine{241             nuevoColor = compra[i].getColor();}
+\DoxyCodeLine{242             nuevoMarca = compra[i].getMarca();}
+\DoxyCodeLine{243             compra.erase(compra.begin() + i);}
+\DoxyCodeLine{244         \}}
+\DoxyCodeLine{245     \}}
+\DoxyCodeLine{246     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{247         \textcolor{keywordflow}{if}(cedula == venta[i].getnCedula())\{}
+\DoxyCodeLine{248             nombre = venta[i].getNombre();}
+\DoxyCodeLine{249             apellido = venta[i].getApellido();}
+\DoxyCodeLine{250             cedula = venta[i].getnCedula();}
+\DoxyCodeLine{251             telefono = venta[i].getnTelefono();}
+\DoxyCodeLine{252         \}}
+\DoxyCodeLine{253     \}}
+\DoxyCodeLine{254     cout << \textcolor{stringliteral}{"{}Ingrese el numero de cedula: "{}};}
+\DoxyCodeLine{255     cin >> cedula;}
+\DoxyCodeLine{256     \textcolor{keywordflow}{while} (\mbox{\hyperlink{operaciones_8h_a8bf61134df13ff3cbb5b251e8341ad08}{validate\_id}}(cedula) == \textcolor{keyword}{true})\{}
+\DoxyCodeLine{257         cout << \textcolor{stringliteral}{"{}Cedula invalida"{}} << endl;}
+\DoxyCodeLine{258         cout << \textcolor{stringliteral}{"{}Ingrese el numero de cedula: "{}};}
+\DoxyCodeLine{259         cin >> cedula;}
+\DoxyCodeLine{260     \}}
+\DoxyCodeLine{261     \textcolor{keywordflow}{if}(\mbox{\hyperlink{operaciones_8h_ab890696a42097d5939201fcc89ff7bc1}{buscarCedula}}(venta, cedula) == \textcolor{keyword}{false})\{}
+\DoxyCodeLine{262         cout << \textcolor{stringliteral}{"{}Cedula no encontrada"{}} << endl;}
+\DoxyCodeLine{263         cout <<\textcolor{stringliteral}{"{} \(\backslash\)t\(\backslash\)t Cliente nuevo "{}}<< endl;}
+\DoxyCodeLine{264         cout << \textcolor{stringliteral}{"{}Ingrese su nombre:"{}};}
+\DoxyCodeLine{265         cin >> nombre;}
+\DoxyCodeLine{266         \textcolor{keywordflow}{while}(\mbox{\hyperlink{operaciones_8h_a72ddd2841edd95cd72e6f25ceb526a6e}{validarLetras}}(nombre) == \textcolor{keyword}{false})\{}
+\DoxyCodeLine{267             cout << \textcolor{stringliteral}{"{}El nombre no puede contener numeros"{}} << endl;}
+\DoxyCodeLine{268             cout << \textcolor{stringliteral}{"{}Ingrese su nombre:"{}};}
+\DoxyCodeLine{269             cin >> nombre;}
+\DoxyCodeLine{270         \}}
+\DoxyCodeLine{271         cout << \textcolor{stringliteral}{"{}Ingrese su apellido:"{}};}
+\DoxyCodeLine{272         cin >> apellido;}
+\DoxyCodeLine{273         \textcolor{keywordflow}{while} (\mbox{\hyperlink{operaciones_8h_a72ddd2841edd95cd72e6f25ceb526a6e}{validarLetras}}(apellido) == \textcolor{keyword}{false})\{}
+\DoxyCodeLine{274             cout << \textcolor{stringliteral}{"{}El apellido no puede contener numeros"{}} << endl;}
+\DoxyCodeLine{275             cout << \textcolor{stringliteral}{"{}Ingrese su apellido:"{}};}
+\DoxyCodeLine{276             cin >> apellido;}
+\DoxyCodeLine{277         \}}
+\DoxyCodeLine{278         cout << \textcolor{stringliteral}{"{}Ingrese su numero de telefono:"{}};}
+\DoxyCodeLine{279         cin >> telefono;}
+\DoxyCodeLine{280         \textcolor{keywordflow}{while} (\mbox{\hyperlink{operaciones_8h_a58bb3024f024a82c79bce5e2ac5bdf5d}{validarNumeroTelefono}}(telefono) == \textcolor{keyword}{false})\{}
+\DoxyCodeLine{281             cout << \textcolor{stringliteral}{"{}Numero de telefono invalido"{}} << endl;}
+\DoxyCodeLine{282             cout << \textcolor{stringliteral}{"{}Ingrese su numero de telefono:"{}};}
+\DoxyCodeLine{283             cin >> telefono;}
+\DoxyCodeLine{284         \}  }
+\DoxyCodeLine{285         \mbox{\hyperlink{classcliente}{cliente}} cli(cedula, nombre, apellido, telefono,nuevoNumeroSerie, nuevoModelo, nuevoMarca, nuevoColor);}
+\DoxyCodeLine{286         venta.push\_back(cli);}
+\DoxyCodeLine{287         cout<<\textcolor{stringliteral}{"{}Celular vendido"{}}<<endl;}
+\DoxyCodeLine{288     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{289         cout<<\textcolor{stringliteral}{"{}Cliente existente"{}}<<endl;}
+\DoxyCodeLine{290         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{291             \textcolor{keywordflow}{if}(cedula == venta[i].getnCedula())\{}
+\DoxyCodeLine{292                 nombre = venta[i].getNombre();}
+\DoxyCodeLine{293                 apellido = venta[i].getApellido();}
+\DoxyCodeLine{294                 cedula = venta[i].getnCedula();}
+\DoxyCodeLine{295                 telefono = venta[i].getnTelefono();}
+\DoxyCodeLine{296             \}}
+\DoxyCodeLine{297         \}}
+\DoxyCodeLine{298         \mbox{\hyperlink{classcliente}{cliente}} cli2(cedula, nombre, apellido, telefono,nuevoNumeroSerie, nuevoModelo, nuevoMarca, nuevoColor);}
+\DoxyCodeLine{299         venta.push\_back(cli2);}
+\DoxyCodeLine{300         cout<<\textcolor{stringliteral}{"{}Celular vendido"{}}<<endl;}
+\DoxyCodeLine{301     \}}
+\DoxyCodeLine{302     }
+\DoxyCodeLine{303 \}}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{305 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_a9d3d8d1124fbc540fbcc096971ebf23f}{imprimirVentas}}(vector<cliente> \&venta)\{}
+\DoxyCodeLine{306     \textcolor{keywordflow}{if}(venta.size() == NULL)\{}
+\DoxyCodeLine{307         cout << \textcolor{stringliteral}{"{}Lista vacia"{}} << endl;}
+\DoxyCodeLine{308     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{309         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{310             cout <<\textcolor{stringliteral}{"{}****************************************"{}} << endl;}
+\DoxyCodeLine{311             cout <<\textcolor{stringliteral}{"{}Numero de Cedula : "{}}<<venta[i].getnCedula()<<endl;}
+\DoxyCodeLine{312             cout <<\textcolor{stringliteral}{"{}Nombre :"{}}<< venta[i].getNombre() <<endl;}
+\DoxyCodeLine{313             cout <<\textcolor{stringliteral}{"{}Apellido :"{}}<<venta[i].getApellido()<<endl;}
+\DoxyCodeLine{314             cout <<\textcolor{stringliteral}{"{}N.Telefono :"{}}<< venta[i].getnTelefono() <<endl;}
+\DoxyCodeLine{315             cout <<\textcolor{stringliteral}{"{}Datos del celular vendido"{}}<<endl;}
+\DoxyCodeLine{316             cout <<\textcolor{stringliteral}{"{}Marca :"{}}<<venta[i].getMarca()<<endl;}
+\DoxyCodeLine{317             cout <<\textcolor{stringliteral}{"{}Modelo :"{}}<<venta[i].getModelo()<<endl;}
+\DoxyCodeLine{318             cout <<\textcolor{stringliteral}{"{}N.Serie :"{}}<< venta[i].getnSerie()<<endl;}
+\DoxyCodeLine{319             cout <<\textcolor{stringliteral}{"{}Color :"{}}<< venta[i].getColor() <<\textcolor{stringliteral}{"{}\(\backslash\)t"{}}<< endl;}
+\DoxyCodeLine{320         \}}
+\DoxyCodeLine{321     \}}
+\DoxyCodeLine{322 \}}
+\DoxyCodeLine{323 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_aa683a84baf539580cbf6f492e7a4a554}{buscarCelularesdeUnCliente}}(vector<cliente> \&venta)\{}
+\DoxyCodeLine{324     \textcolor{keywordtype}{string} cedula;}
+\DoxyCodeLine{325     \textcolor{keywordflow}{if} (venta.size() == NULL)\{}
+\DoxyCodeLine{326         cout << \textcolor{stringliteral}{"{}Lista vacia"{}} << endl;}
+\DoxyCodeLine{327     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{328         cout << \textcolor{stringliteral}{"{}Ingrese el numero de cedula del cliente: "{}};}
+\DoxyCodeLine{329         cin >> cedula;}
+\DoxyCodeLine{330         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{331             \textcolor{keywordflow}{if}(cedula == venta[i].getnCedula())\{}
+\DoxyCodeLine{332                 cout << \textcolor{stringliteral}{"{}****************************************"{}} << endl;}
+\DoxyCodeLine{333                 cout <<\textcolor{stringliteral}{"{}Numero de Cedula : "{}}<<venta[i].getnCedula()<<endl;}
+\DoxyCodeLine{334                 cout <<\textcolor{stringliteral}{"{}Nombre :"{}}<< venta[i].getNombre() <<endl;}
+\DoxyCodeLine{335                 cout <<\textcolor{stringliteral}{"{}Apellido :"{}}<<venta[i].getApellido()<<endl;}
+\DoxyCodeLine{336                 cout <<\textcolor{stringliteral}{"{}N.Telefono :"{}}<< venta[i].getnTelefono() <<endl;}
+\DoxyCodeLine{337                 cout <<\textcolor{stringliteral}{"{}Datos del celular vendido"{}}<<endl;}
+\DoxyCodeLine{338                 cout <<\textcolor{stringliteral}{"{}Marca :"{}}<<venta[i].getMarca()<<endl;}
+\DoxyCodeLine{339                 cout <<\textcolor{stringliteral}{"{}Modelo :"{}}<<venta[i].getModelo()<<endl;}
+\DoxyCodeLine{340                 cout <<\textcolor{stringliteral}{"{}N.Serie :"{}}<< venta[i].getnSerie()<<endl;}
+\DoxyCodeLine{341                 cout <<\textcolor{stringliteral}{"{}Color :"{}}<< venta[i].getColor() <<\textcolor{stringliteral}{"{}\(\backslash\)t"{}}<< endl;}
+\DoxyCodeLine{342             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(i == venta.size()-\/1)\{}
+\DoxyCodeLine{343                 cout << \textcolor{stringliteral}{"{}Cliente no encontrado"{}} << endl;}
+\DoxyCodeLine{344             \}}
+\DoxyCodeLine{345         \}}
+\DoxyCodeLine{346     \}}
+\DoxyCodeLine{347 \}}
+\DoxyCodeLine{348 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_ac33e840b8095d712fca2583c524fbcdc}{buscarCelular}}(vector<celular> \&compra)\{}
+\DoxyCodeLine{349     \textcolor{keywordflow}{if} (compra.size() == NULL)\{}
+\DoxyCodeLine{350         cout << \textcolor{stringliteral}{"{}Lista vacia"{}} << endl;}
+\DoxyCodeLine{351     \}}
+\DoxyCodeLine{352     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{353         cout << \textcolor{stringliteral}{"{}Ingrese Numero de Serie: "{}};}
+\DoxyCodeLine{354         cin >> \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}};}
+\DoxyCodeLine{355         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{356             \textcolor{keywordflow}{if}(compra[i].getnSerie() == \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}})\{}
+\DoxyCodeLine{357                 cout<<\textcolor{stringliteral}{"{}Celular encontrado"{}}<<endl;}
+\DoxyCodeLine{358                 cout << \textcolor{stringliteral}{"{}******************************"{}} << endl;}
+\DoxyCodeLine{359                 cout << \textcolor{stringliteral}{"{}Modelo:"{}} << compra[i].getModelo() << endl;}
+\DoxyCodeLine{360                 cout<<\textcolor{stringliteral}{"{}Marca:"{}}<< compra[i].getMarca()<<endl;}
+\DoxyCodeLine{361                 cout << \textcolor{stringliteral}{"{}Numero de Serie:"{}} << compra[i].getnSerie() << endl;}
+\DoxyCodeLine{362                 cout<<\textcolor{stringliteral}{"{}Color:"{}}<< compra[i].getColor() <<endl;}
+\DoxyCodeLine{363                 cout << \textcolor{stringliteral}{"{}******************************"{}} << endl;}
+\DoxyCodeLine{364                 }
+\DoxyCodeLine{365             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{366                 cout<<\textcolor{stringliteral}{"{}No se encontro el celular"{}}<<endl;}
+\DoxyCodeLine{367             \}}
+\DoxyCodeLine{368 }
+\DoxyCodeLine{369         \}}
+\DoxyCodeLine{370     \}}
+\DoxyCodeLine{371 \}}
+\DoxyCodeLine{372 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_a5f86a9b8c8d5a77ce2266004261b6076}{modificarCelular}}(vector<celular> \&compra)\{}
+\DoxyCodeLine{373     \textcolor{keywordflow}{if} (compra.size() == NULL)\{}
+\DoxyCodeLine{374         cout << \textcolor{stringliteral}{"{}Lista vacia"{}} << endl;}
+\DoxyCodeLine{375     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{376         \textcolor{keywordtype}{string} nuevoNumeroSerie, nuevaMarca, nuevoModelo, nuevoColor;}
+\DoxyCodeLine{377         \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{378         cout << \textcolor{stringliteral}{"{}Ingrese Numero de Serie: "{}};}
+\DoxyCodeLine{379         cin >> \mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}};}
+\DoxyCodeLine{380         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{381             \textcolor{keywordflow}{if}(\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}} == compra[i].getnSerie())\{}
+\DoxyCodeLine{382                 cout<<\textcolor{stringliteral}{"{}Celular encontrado"{}}<<endl;}
+\DoxyCodeLine{383                 cout <<\textcolor{stringliteral}{"{}Que dato desea modificar?"{}}<<endl;}
+\DoxyCodeLine{384                 cout <<\textcolor{stringliteral}{"{}1. Marca"{}}<<endl;}
+\DoxyCodeLine{385                 cout <<\textcolor{stringliteral}{"{}2. Modelo"{}}<<endl;}
+\DoxyCodeLine{386                 cout <<\textcolor{stringliteral}{"{}3. Color"{}}<<endl;}
+\DoxyCodeLine{387                 cin >> \mbox{\hyperlink{operaciones_8h_a39f485a4773f634607a5caf635218a32}{opcion}};}
+\DoxyCodeLine{388                 \textcolor{keywordflow}{switch}(\mbox{\hyperlink{operaciones_8h_a39f485a4773f634607a5caf635218a32}{opcion}})\{}
+\DoxyCodeLine{389                     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{390                         cout<<\textcolor{stringliteral}{"{}\(\backslash\)tMarcas disponibles: Samsung, Apple, Xiaomi, Huawei , LG, Motorola, Sony, Nokia, Otro"{}}<<endl;}
+\DoxyCodeLine{391                         cout << \textcolor{stringliteral}{"{}Ingrese nueva Marca: "{}};}
+\DoxyCodeLine{392                         cin >> nuevaMarca;}
+\DoxyCodeLine{393                         \textcolor{keywordflow}{while}(!\mbox{\hyperlink{operaciones_8h_a44116cb9085419182602a18a48096612}{validarMarcadeCelular}}(nuevaMarca))\{}
+\DoxyCodeLine{394                             cout << \textcolor{stringliteral}{"{}Ingrese nueva Marca: "{}};}
+\DoxyCodeLine{395                             cin >> nuevaMarca;}
+\DoxyCodeLine{396                         \}}
+\DoxyCodeLine{397                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{398                             \textcolor{keywordflow}{if}(\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}} == compra[i].getnSerie())\{}
+\DoxyCodeLine{399                                 compra[i].setMarca(nuevaMarca);}
+\DoxyCodeLine{400                             \}}
+\DoxyCodeLine{401                         \}}
+\DoxyCodeLine{402                             cout << \textcolor{stringliteral}{"{}Marca modificado"{}} << endl;}
+\DoxyCodeLine{403                             system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{404                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{405                     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{406                         cout << \textcolor{stringliteral}{"{}Ingrese nuevo Modelo: "{}};}
+\DoxyCodeLine{407                         cin.ignore();}
+\DoxyCodeLine{408                         getline(cin, nuevoModelo);}
+\DoxyCodeLine{409                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{410                             \textcolor{keywordflow}{if}(\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}} == compra[i].getnSerie())\{}
+\DoxyCodeLine{411                                 compra[i].setModelo(nuevoModelo);}
+\DoxyCodeLine{412                             \}}
+\DoxyCodeLine{413                         \}}
+\DoxyCodeLine{414                         cout << \textcolor{stringliteral}{"{}Modelo modificado"{}} << endl;}
+\DoxyCodeLine{415                         system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{416                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{417                     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{418                         cout << \textcolor{stringliteral}{"{}Ingrese nuevo Color: "{}};}
+\DoxyCodeLine{419                         cin.ignore();}
+\DoxyCodeLine{420                         getline(cin,nuevoColor);}
+\DoxyCodeLine{421                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{422                             \textcolor{keywordflow}{if}(\mbox{\hyperlink{operaciones_8h_a8f1d30cc98d0bfceb6820e8b61a38bcd}{numeroSerie}} == compra[i].getnSerie())\{}
+\DoxyCodeLine{423                                 compra[i].setColor(nuevoColor);}
+\DoxyCodeLine{424                             \}}
+\DoxyCodeLine{425                         \}}
+\DoxyCodeLine{426                         cout << \textcolor{stringliteral}{"{}Color modificado"{}} << endl;}
+\DoxyCodeLine{427                         system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{428                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{429                     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{430                         cout << \textcolor{stringliteral}{"{}Opcion no valida"{}} << endl;}
+\DoxyCodeLine{431                         system(\textcolor{stringliteral}{"{}pause"{}});            }
+\DoxyCodeLine{432                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{433                 \}}
+\DoxyCodeLine{434             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{435                 cout<<\textcolor{stringliteral}{"{}No se encontro el celular"{}}<<endl;}
+\DoxyCodeLine{436                 system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{437                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{438             \}}
+\DoxyCodeLine{439 }
+\DoxyCodeLine{440         \}}
+\DoxyCodeLine{441         system (\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{442         \}\textcolor{keywordflow}{while}(\mbox{\hyperlink{operaciones_8h_a39f485a4773f634607a5caf635218a32}{opcion}} != 4);}
+\DoxyCodeLine{443     \}}
+\DoxyCodeLine{444 \}}
+\DoxyCodeLine{445 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_aff18d0770b3dddb901d7ad77a54fab2f}{modificarCliente}}(vector<cliente> \&venta)\{}
+\DoxyCodeLine{446     \textcolor{keywordflow}{if} (venta.size() == NULL)\{}
+\DoxyCodeLine{447         cout << \textcolor{stringliteral}{"{}Lista vacia"{}} << endl;}
+\DoxyCodeLine{448     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{449         \textcolor{keywordtype}{string} cedula ,nuevoNombre, nuevoApellido, nuevoTelefono;}
+\DoxyCodeLine{450         \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{451         cout << \textcolor{stringliteral}{"{}Ingrese Numero de Cedula: "{}};}
+\DoxyCodeLine{452         cin >> cedula;}
+\DoxyCodeLine{453         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{454             \textcolor{keywordflow}{if}(cedula == venta[i].getnCedula())\{}
+\DoxyCodeLine{455                 cout<<\textcolor{stringliteral}{"{}Cliente encontrado"{}}<<endl;}
+\DoxyCodeLine{456                 cout <<\textcolor{stringliteral}{"{}Que dato desea modificar?"{}}<<endl;}
+\DoxyCodeLine{457                 cout <<\textcolor{stringliteral}{"{}1. Nombre"{}}<<endl;}
+\DoxyCodeLine{458                 cout <<\textcolor{stringliteral}{"{}2. Apellido"{}}<<endl;}
+\DoxyCodeLine{459                 cout <<\textcolor{stringliteral}{"{}3. Telefono"{}}<<endl;}
+\DoxyCodeLine{460                 cin >> \mbox{\hyperlink{operaciones_8h_a39f485a4773f634607a5caf635218a32}{opcion}};}
+\DoxyCodeLine{461                 \textcolor{keywordflow}{switch}(\mbox{\hyperlink{operaciones_8h_a39f485a4773f634607a5caf635218a32}{opcion}})\{}
+\DoxyCodeLine{462                     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{463                         cout << \textcolor{stringliteral}{"{}Ingrese nuevo Nombre: "{}};}
+\DoxyCodeLine{464                         cin >> nuevoNombre;}
+\DoxyCodeLine{465                         \textcolor{keywordflow}{while}(!\mbox{\hyperlink{operaciones_8h_a72ddd2841edd95cd72e6f25ceb526a6e}{validarLetras}}(nuevoNombre))\{}
+\DoxyCodeLine{466                             cout <<\textcolor{stringliteral}{"{}El nombre no puede contener numeros"{}}<<endl;}
+\DoxyCodeLine{467                             cout << \textcolor{stringliteral}{"{}Ingrese nuevo Nombre: "{}};}
+\DoxyCodeLine{468                             cin >> nuevoNombre;}
+\DoxyCodeLine{469                         \}}
+\DoxyCodeLine{470                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{471                             \textcolor{keywordflow}{if}(cedula == venta[i].getnCedula())\{}
+\DoxyCodeLine{472                                 venta[i].setNombre(nuevoNombre);}
+\DoxyCodeLine{473                             \}}
+\DoxyCodeLine{474                         \}}
+\DoxyCodeLine{475                             cout << \textcolor{stringliteral}{"{}Nombre modificado"{}} << endl;}
+\DoxyCodeLine{476                             system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{477                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{478                     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{479                         cout << \textcolor{stringliteral}{"{}Ingrese nuevo Apellido: "{}};}
+\DoxyCodeLine{480                         cin >> nuevoApellido;}
+\DoxyCodeLine{481                         \textcolor{keywordflow}{while}(!\mbox{\hyperlink{operaciones_8h_a72ddd2841edd95cd72e6f25ceb526a6e}{validarLetras}}(nuevoApellido))\{}
+\DoxyCodeLine{482                             cout <<\textcolor{stringliteral}{"{}El apellido no puede contener numeros"{}}<<endl;}
+\DoxyCodeLine{483                             cout << \textcolor{stringliteral}{"{}Ingrese nuevo Apellido: "{}};}
+\DoxyCodeLine{484                             cin >> nuevoApellido;}
+\DoxyCodeLine{485                         \}}
+\DoxyCodeLine{486                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{487                             \textcolor{keywordflow}{if}(cedula == venta[i].getnCedula())\{}
+\DoxyCodeLine{488                                 venta[i].setApellido(nuevoApellido);}
+\DoxyCodeLine{489                             \}}
+\DoxyCodeLine{490                         \}}
+\DoxyCodeLine{491                             cout << \textcolor{stringliteral}{"{}Apellido modificado"{}} << endl;}
+\DoxyCodeLine{492                             system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{493                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{494                     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{495                         cout << \textcolor{stringliteral}{"{}Ingrese nuevo Telefono: "{}};}
+\DoxyCodeLine{496                         cin >> nuevoTelefono;}
+\DoxyCodeLine{497                         \textcolor{keywordflow}{while} (\mbox{\hyperlink{operaciones_8h_a58bb3024f024a82c79bce5e2ac5bdf5d}{validarNumeroTelefono}}(nuevoTelefono) == \textcolor{keyword}{false})\{}
+\DoxyCodeLine{498                             cout << \textcolor{stringliteral}{"{}Numero de telefono invalido"{}} << endl;}
+\DoxyCodeLine{499                             cout << \textcolor{stringliteral}{"{}Ingrese su numero de telefono:"{}};}
+\DoxyCodeLine{500                             cin >> nuevoTelefono;}
+\DoxyCodeLine{501                         \}  }
+\DoxyCodeLine{502                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{503                             \textcolor{keywordflow}{if}(cedula == venta[i].getnCedula())\{}
+\DoxyCodeLine{504                                 venta[i].setnTelefono(nuevoTelefono);}
+\DoxyCodeLine{505                             \}}
+\DoxyCodeLine{506                         \}}
+\DoxyCodeLine{507                             cout << \textcolor{stringliteral}{"{}Telefono modificado"{}} << endl;}
+\DoxyCodeLine{508                             system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{509                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{510                     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{511                         cout << \textcolor{stringliteral}{"{}Opcion no valida"{}} << endl;}
+\DoxyCodeLine{512                         system(\textcolor{stringliteral}{"{}pause"{}});            }
+\DoxyCodeLine{513                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{514                 \}}
+\DoxyCodeLine{515             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{516                 cout<<\textcolor{stringliteral}{"{}No se encontro el cliente"{}}<<endl;}
+\DoxyCodeLine{517                 system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{518                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{519             \}}
+\DoxyCodeLine{520         \}}
+\DoxyCodeLine{521         system (\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{522         \}\textcolor{keywordflow}{while}(\mbox{\hyperlink{operaciones_8h_a39f485a4773f634607a5caf635218a32}{opcion}} != 4);}
+\DoxyCodeLine{523     \}}
+\DoxyCodeLine{524 }
+\DoxyCodeLine{525 \}}
+\DoxyCodeLine{526         }
+\DoxyCodeLine{527 }
+\DoxyCodeLine{528 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_a9a0a3cf14c6d5b096037beaa60b135ae}{guardarTxt}}(vector<celular> \&compra)\{}
+\DoxyCodeLine{529     ofstream \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}};}
+\DoxyCodeLine{530     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.open(\textcolor{stringliteral}{"{}celulares.txt"{}});}
+\DoxyCodeLine{531     \textcolor{keywordflow}{if}(\mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.fail())\{}
+\DoxyCodeLine{532         cout << \textcolor{stringliteral}{"{}Error al abrir el archivo"{}} << endl;}
+\DoxyCodeLine{533     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{534         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{535             \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}} << compra[i].getMarca() << \textcolor{stringliteral}{"{},"{}} << compra[i].getModelo() << \textcolor{stringliteral}{"{},"{}} << compra[i].getnSerie() << \textcolor{stringliteral}{"{},"{}} << compra[i].getColor() << endl;}
+\DoxyCodeLine{536         \}}
+\DoxyCodeLine{537     \}}
+\DoxyCodeLine{538     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.close();}
+\DoxyCodeLine{539 \}}
+\DoxyCodeLine{540 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_abadc01567cdaab6782a37c897c62d547}{guardarBin}}(vector<celular> \&compra)\{}
+\DoxyCodeLine{541     ofstream \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}};}
+\DoxyCodeLine{542     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.open(\textcolor{stringliteral}{"{}celulares.dat"{}}, ios::binary);}
+\DoxyCodeLine{543     \textcolor{keywordflow}{if}(\mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.fail())\{}
+\DoxyCodeLine{544         cout << \textcolor{stringliteral}{"{}Error al abrir el archivo"{}} << endl;}
+\DoxyCodeLine{545     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{546         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{547             \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.write((\textcolor{keywordtype}{char}*)\&compra[i], \textcolor{keyword}{sizeof}(\mbox{\hyperlink{classcelular}{celular}}));}
+\DoxyCodeLine{548         \}}
+\DoxyCodeLine{549     \}}
+\DoxyCodeLine{550     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.close();}
+\DoxyCodeLine{551 \}}
+\DoxyCodeLine{552 }
+\DoxyCodeLine{553 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_a18035314a7cf331cf0fe8c740e309d4b}{guardarClienteTxt}}(vector<cliente> \&venta, vector<celular> \&compra)\{}
+\DoxyCodeLine{554     ofstream \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}};}
+\DoxyCodeLine{555     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.open(\textcolor{stringliteral}{"{}clientes.txt"{}});}
+\DoxyCodeLine{556     \textcolor{keywordflow}{if}(\mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.fail())\{}
+\DoxyCodeLine{557         cout << \textcolor{stringliteral}{"{}Error al abrir el archivo"{}} << endl;}
+\DoxyCodeLine{558     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{559         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{560             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < compra.size(); j++)\{}
+\DoxyCodeLine{561                     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}} << venta[i].getNombre() << \textcolor{stringliteral}{"{},"{}} << venta[i].getApellido() << \textcolor{stringliteral}{"{},"{}} << venta[i].getnCedula() << \textcolor{stringliteral}{"{},"{}} << venta[i].getnTelefono() << \textcolor{stringliteral}{"{},"{}} << venta[i].getMarca() << \textcolor{stringliteral}{"{},"{}} << venta[i].getModelo() << \textcolor{stringliteral}{"{},"{}} << venta[i].getnSerie() << \textcolor{stringliteral}{"{},"{}} << venta[i].getColor() << endl;}
+\DoxyCodeLine{562                 \}}
+\DoxyCodeLine{563             \}}
+\DoxyCodeLine{564         \}}
+\DoxyCodeLine{565     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.close();}
+\DoxyCodeLine{566 \}}
+\DoxyCodeLine{567 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_ae9f4cd1db15e5d63f4d72e0255a10f91}{guardarClienteBin}}(vector<cliente> \&venta, vector<celular> \&compra)\{}
+\DoxyCodeLine{568     ofstream \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}};}
+\DoxyCodeLine{569     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.open(\textcolor{stringliteral}{"{}clientes.dat"{}}, ios::binary);}
+\DoxyCodeLine{570     \textcolor{keywordflow}{if}(\mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.fail())\{}
+\DoxyCodeLine{571         cout << \textcolor{stringliteral}{"{}Error al abrir el archivo"{}} << endl;}
+\DoxyCodeLine{572     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{573         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{574             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < compra.size(); j++)\{}
+\DoxyCodeLine{575                 \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.write((\textcolor{keywordtype}{char}*)\&venta[i], \textcolor{keyword}{sizeof}(\mbox{\hyperlink{classcliente}{cliente}}));}
+\DoxyCodeLine{576             \}}
+\DoxyCodeLine{577         \}}
+\DoxyCodeLine{578     \}}
+\DoxyCodeLine{579     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.close();}
+\DoxyCodeLine{580 \}}
+\DoxyCodeLine{581 }
+\DoxyCodeLine{582 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_a5241b8027217bce8dd89abd27dc82b4a}{crearArchivo}}(vector<celular> \&compra, vector<cliente> \&venta)\{}
+\DoxyCodeLine{583     ofstream \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}};}
+\DoxyCodeLine{584     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.open(\textcolor{stringliteral}{"{}Datos\_del\_programa.html"{}});}
+\DoxyCodeLine{585     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<!DOCTYPE html>"{}}<<endl;}
+\DoxyCodeLine{586     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<html>"{}}<<endl;}
+\DoxyCodeLine{587     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<head>"{}}<<endl;}
+\DoxyCodeLine{588     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<title>Datos del programa</title>"{}}<<endl;}
+\DoxyCodeLine{589     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}</head>"{}}<<endl;}
+\DoxyCodeLine{590     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<body>"{}}<<endl;}
+\DoxyCodeLine{591     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<h1>Datos del programa</h1>"{}}<<endl;}
+\DoxyCodeLine{592     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<h2>Celulares</h2>"{}}<<endl;}
+\DoxyCodeLine{593     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<table>"{}}<<endl;}
+\DoxyCodeLine{594     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<tr>"{}}<<endl;}
+\DoxyCodeLine{595     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Marca</th>"{}}<<endl;}
+\DoxyCodeLine{596     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Modelo</th>"{}}<<endl;}
+\DoxyCodeLine{597     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Numero de serie</th>"{}}<<endl;}
+\DoxyCodeLine{598     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Color</th>"{}}<<endl;}
+\DoxyCodeLine{599     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}</tr>"{}}<<endl;}
+\DoxyCodeLine{600     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < compra.size(); i++)\{}
+\DoxyCodeLine{601         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<tr>"{}}<<endl;}
+\DoxyCodeLine{602         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<compra[i].getMarca()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{603         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<compra[i].getModelo()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{604         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<compra[i].getnSerie()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{605         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<compra[i].getColor()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{606         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}</tr>"{}}<<endl;}
+\DoxyCodeLine{607     \}}
+\DoxyCodeLine{608     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}</table>"{}}<<endl;}
+\DoxyCodeLine{609     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<h2>Clientes</h2>"{}}<<endl;}
+\DoxyCodeLine{610     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<table>"{}}<<endl;}
+\DoxyCodeLine{611     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<tr>"{}}<<endl;}
+\DoxyCodeLine{612     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Nombre</th>"{}}<<endl;}
+\DoxyCodeLine{613     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Apellido</th>"{}}<<endl;}
+\DoxyCodeLine{614     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Numero de cedula</th>"{}}<<endl;}
+\DoxyCodeLine{615     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Numero de telefono</th>"{}}<<endl;}
+\DoxyCodeLine{616     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Marca</th>"{}}<<endl;}
+\DoxyCodeLine{617     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Modelo</th>"{}}<<endl;}
+\DoxyCodeLine{618     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Numero de serie</th>"{}}<<endl;}
+\DoxyCodeLine{619     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<th>Color</th>"{}}<<endl;}
+\DoxyCodeLine{620     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}</tr>"{}}<<endl;}
+\DoxyCodeLine{621     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < venta.size(); i++)\{}
+\DoxyCodeLine{622         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<tr>"{}}<<endl;}
+\DoxyCodeLine{623         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<venta[i].getNombre()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{624         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<venta[i].getApellido()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{625         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<venta[i].getnCedula()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{626         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<venta[i].getnTelefono()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{627         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<venta[i].getMarca()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{628         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<venta[i].getModelo()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{629         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<venta[i].getnSerie()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{630         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}<td>"{}}<<venta[i].getColor()<<\textcolor{stringliteral}{"{}</td>"{}}<<endl;}
+\DoxyCodeLine{631         \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}</tr>"{}}<<endl;}
+\DoxyCodeLine{632     \}}
+\DoxyCodeLine{633     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}</table>"{}}<<endl;}
+\DoxyCodeLine{634     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}</body>"{}}<<endl;}
+\DoxyCodeLine{635     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}<<\textcolor{stringliteral}{"{}</html>"{}}<<endl;}
+\DoxyCodeLine{636     \mbox{\hyperlink{archivo_8h_aa4be24487932c6fe170a28ec84d3ad69}{archivo}}.close();}
+\DoxyCodeLine{637 \}}
+\DoxyCodeLine{638 }
+\DoxyCodeLine{639 }
+\DoxyCodeLine{640 }
+\DoxyCodeLine{641 }
+\DoxyCodeLine{642                    }
+\DoxyCodeLine{643                     }
+\DoxyCodeLine{644                                  }
+\DoxyCodeLine{645           }
+\DoxyCodeLine{646 }
+\DoxyCodeLine{647 }
+\DoxyCodeLine{648 }
+
+\end{DoxyCode}

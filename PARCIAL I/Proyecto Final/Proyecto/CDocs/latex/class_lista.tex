@@ -1,0 +1,231 @@
+\hypertarget{class_lista}{}\doxysection{Lista\texorpdfstring{$<$}{<} Type \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_lista}\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+
+
+{\ttfamily \#include $<$Lista.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lista_a9e74820e2d81e143c273992e563dffd3}{Lista}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_lista}{Lista}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_lista_a76f517b2be68b9e88b9480086cd7c52b}{esta\+Vacia}} ()
+\begin{DoxyCompactList}\small\item\em method for validate if the list is empty \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_lista_a1970f4bcda05bc8f943b78b2b3d3e3b6}{buscar\+Celular}} (const Type \&) const
+\begin{DoxyCompactList}\small\item\em method for search a element in the list \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_lista_adff6b28855dc89ed3c3b56879f47d281}{buscar\+Cliente}} (const Type \&) const
+\begin{DoxyCompactList}\small\item\em method for search a element in the list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_a3156d74e086483a4d3436e6f74c26fdd}{comprar\+Celular}} (const Type \&)
+\begin{DoxyCompactList}\small\item\em method for add a element in the list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_a9fa2f5f899481f69dd4f7c836b124282}{vender\+Celular}} (const Type \&, const Type \&)
+\begin{DoxyCompactList}\small\item\em method for add a element in the list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_ad0e382b0c823289e42e3b98a801b68c5}{imprimir\+Celular}} (const Type \&)
+\begin{DoxyCompactList}\small\item\em method for add a element in the list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_ab4f6b6395459e5d88b5411ec5969741c}{imprimir\+Ventas}} (const Type \&)
+\begin{DoxyCompactList}\small\item\em method for add a element in the list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_a9fa2f5f899481f69dd4f7c836b124282}{vender\+Celular}} (const Type \&, const Type \&)
+\begin{DoxyCompactList}\small\item\em method for add a element in the list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_a1e569644bdd1ac01449e332d4338727a}{modificar\+Celular}} (const Type \&)
+\begin{DoxyCompactList}\small\item\em method for modify a element in the list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_aea701b3decc91f50d16b7a6d8e27dd9f}{modificar\+Cliente}} (const Type \&)
+\begin{DoxyCompactList}\small\item\em method for modify a element in the list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lista_acd55e267ae5af75464c3f9e15063a083}{eliminar\+Celular}} (const Type \&)
+\begin{DoxyCompactList}\small\item\em method for remove a element in the list \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_lista_af0aac01557891e80d6ce429554e55dad}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em method for add a element in the list \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_nodo}{Nodo}}$<$ Type $>$ $\ast$ \mbox{\hyperlink{class_lista_a13b9da8196af9e6bc2cb8d5cf698976d}{primero}}
+\item 
+\mbox{\hyperlink{class_nodo}{Nodo}}$<$ Type $>$ $\ast$ \mbox{\hyperlink{class_lista_af996e4cd657296cd95a7edd56e501912}{ultimo}}
+\item 
+\mbox{\hyperlink{class_nodo}{Nodo}}$<$ Type $>$ $\ast$ \mbox{\hyperlink{class_lista_ac2d3109fdc2174781270714840946517}{nuevo\+Nodo}}
+\item 
+int \mbox{\hyperlink{class_lista_a123b088031f483f479418afb2a4661d8}{size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_lista_a9e74820e2d81e143c273992e563dffd3}\label{class_lista_a9e74820e2d81e143c273992e563dffd3}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{Lista()}{Lista()}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+\mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\mbox{\hyperlink{class_lista}{\+::\+Lista}}}
+
+
+
+Construct a new \mbox{\hyperlink{class_lista}{Lista}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lista_a1970f4bcda05bc8f943b78b2b3d3e3b6}\label{class_lista_a1970f4bcda05bc8f943b78b2b3d3e3b6}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!buscarCelular@{buscarCelular}}
+\index{buscarCelular@{buscarCelular}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{buscarCelular()}{buscarCelular()}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+bool \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::buscar\+Celular (\begin{DoxyParamCaption}\item[{const Type \&}]{dato\+Buscado }\end{DoxyParamCaption}) const}
+
+
+
+method for search a element in the list 
+
+\mbox{\Hypertarget{class_lista_adff6b28855dc89ed3c3b56879f47d281}\label{class_lista_adff6b28855dc89ed3c3b56879f47d281}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!buscarCliente@{buscarCliente}}
+\index{buscarCliente@{buscarCliente}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{buscarCliente()}{buscarCliente()}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+bool \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::buscar\+Cliente (\begin{DoxyParamCaption}\item[{const Type \&}]{dato\+Buscado }\end{DoxyParamCaption}) const}
+
+
+
+method for search a element in the list 
+
+\mbox{\Hypertarget{class_lista_a3156d74e086483a4d3436e6f74c26fdd}\label{class_lista_a3156d74e086483a4d3436e6f74c26fdd}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!comprarCelular@{comprarCelular}}
+\index{comprarCelular@{comprarCelular}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{comprarCelular()}{comprarCelular()}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+void \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::comprar\+Celular (\begin{DoxyParamCaption}\item[{const Type \&}]{nuevo\+Dato }\end{DoxyParamCaption})}
+
+
+
+method for add a element in the list 
+
+\mbox{\Hypertarget{class_lista_acd55e267ae5af75464c3f9e15063a083}\label{class_lista_acd55e267ae5af75464c3f9e15063a083}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!eliminarCelular@{eliminarCelular}}
+\index{eliminarCelular@{eliminarCelular}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{eliminarCelular()}{eliminarCelular()}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+void \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::eliminar\+Celular (\begin{DoxyParamCaption}\item[{const Type \&}]{dato\+Buscado }\end{DoxyParamCaption})}
+
+
+
+method for remove a element in the list 
+
+\mbox{\Hypertarget{class_lista_a76f517b2be68b9e88b9480086cd7c52b}\label{class_lista_a76f517b2be68b9e88b9480086cd7c52b}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!estaVacia@{estaVacia}}
+\index{estaVacia@{estaVacia}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{estaVacia()}{estaVacia()}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+bool \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::esta\+Vacia}
+
+
+
+method for validate if the list is empty 
+
+\mbox{\Hypertarget{class_lista_af0aac01557891e80d6ce429554e55dad}\label{class_lista_af0aac01557891e80d6ce429554e55dad}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+int \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::get\+Size}
+
+
+
+method for add a element in the list 
+
+\mbox{\Hypertarget{class_lista_ad0e382b0c823289e42e3b98a801b68c5}\label{class_lista_ad0e382b0c823289e42e3b98a801b68c5}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!imprimirCelular@{imprimirCelular}}
+\index{imprimirCelular@{imprimirCelular}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{imprimirCelular()}{imprimirCelular()}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+void \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::imprimir\+Celular (\begin{DoxyParamCaption}\item[{const Type \&}]{dato }\end{DoxyParamCaption})}
+
+
+
+method for add a element in the list 
+
+\mbox{\Hypertarget{class_lista_ab4f6b6395459e5d88b5411ec5969741c}\label{class_lista_ab4f6b6395459e5d88b5411ec5969741c}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!imprimirVentas@{imprimirVentas}}
+\index{imprimirVentas@{imprimirVentas}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{imprimirVentas()}{imprimirVentas()}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+void \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::imprimir\+Ventas (\begin{DoxyParamCaption}\item[{const Type \&}]{dato }\end{DoxyParamCaption})}
+
+
+
+method for add a element in the list 
+
+\mbox{\Hypertarget{class_lista_a1e569644bdd1ac01449e332d4338727a}\label{class_lista_a1e569644bdd1ac01449e332d4338727a}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!modificarCelular@{modificarCelular}}
+\index{modificarCelular@{modificarCelular}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{modificarCelular()}{modificarCelular()}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+void \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::modificar\+Celular (\begin{DoxyParamCaption}\item[{const Type \&}]{nuevo\+Dato }\end{DoxyParamCaption})}
+
+
+
+method for modify a element in the list 
+
+\mbox{\Hypertarget{class_lista_aea701b3decc91f50d16b7a6d8e27dd9f}\label{class_lista_aea701b3decc91f50d16b7a6d8e27dd9f}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!modificarCliente@{modificarCliente}}
+\index{modificarCliente@{modificarCliente}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{modificarCliente()}{modificarCliente()}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+void \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::modificar\+Cliente (\begin{DoxyParamCaption}\item[{const Type \&}]{nuevo\+Dato }\end{DoxyParamCaption})}
+
+
+
+method for modify a element in the list 
+
+\mbox{\Hypertarget{class_lista_a9fa2f5f899481f69dd4f7c836b124282}\label{class_lista_a9fa2f5f899481f69dd4f7c836b124282}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!venderCelular@{venderCelular}}
+\index{venderCelular@{venderCelular}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{venderCelular()}{venderCelular()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+void \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::vender\+Celular (\begin{DoxyParamCaption}\item[{const Type \&}]{nuevo\+Dato,  }\item[{const Type \&}]{dato }\end{DoxyParamCaption})}
+
+
+
+method for add a element in the list 
+
+\mbox{\Hypertarget{class_lista_a9fa2f5f899481f69dd4f7c836b124282}\label{class_lista_a9fa2f5f899481f69dd4f7c836b124282}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!venderCelular@{venderCelular}}
+\index{venderCelular@{venderCelular}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{venderCelular()}{venderCelular()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+void \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::vender\+Celular (\begin{DoxyParamCaption}\item[{const Type \&}]{,  }\item[{const Type \&}]{ }\end{DoxyParamCaption})}
+
+
+
+method for add a element in the list 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_lista_ac2d3109fdc2174781270714840946517}\label{class_lista_ac2d3109fdc2174781270714840946517}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!nuevoNodo@{nuevoNodo}}
+\index{nuevoNodo@{nuevoNodo}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{nuevoNodo}{nuevoNodo}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+\mbox{\hyperlink{class_nodo}{Nodo}}$<$Type$>$$\ast$ \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::nuevo\+Nodo\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_lista_a13b9da8196af9e6bc2cb8d5cf698976d}\label{class_lista_a13b9da8196af9e6bc2cb8d5cf698976d}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!primero@{primero}}
+\index{primero@{primero}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{primero}{primero}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+\mbox{\hyperlink{class_nodo}{Nodo}}$<$Type$>$$\ast$ \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::primero\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_lista_a123b088031f483f479418afb2a4661d8}\label{class_lista_a123b088031f483f479418afb2a4661d8}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!size@{size}}
+\index{size@{size}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+int \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::size\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_lista_af996e4cd657296cd95a7edd56e501912}\label{class_lista_af996e4cd657296cd95a7edd56e501912}} 
+\index{Lista$<$ Type $>$@{Lista$<$ Type $>$}!ultimo@{ultimo}}
+\index{ultimo@{ultimo}!Lista$<$ Type $>$@{Lista$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{ultimo}{ultimo}}
+{\footnotesize\ttfamily template$<$class Type $>$ \\
+\mbox{\hyperlink{class_nodo}{Nodo}}$<$Type$>$$\ast$ \mbox{\hyperlink{class_lista}{Lista}}$<$ Type $>$\+::ultimo\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_lista_8h}{Lista.\+h}}\end{DoxyCompactItemize}

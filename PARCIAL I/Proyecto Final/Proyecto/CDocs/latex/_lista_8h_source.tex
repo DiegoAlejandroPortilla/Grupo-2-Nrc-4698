@@ -1,0 +1,306 @@
+\hypertarget{_lista_8h_source}{}\doxysection{Lista.\+h}
+\mbox{\hyperlink{_lista_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{comment}{/*}}
+\DoxyCodeLine{3 \textcolor{comment}{* @flie Lista.h}}
+\DoxyCodeLine{4 \textcolor{comment}{* @author Diego Portilla -\/ Darwin Valdiviezo -\/ Estructura de Datos}}
+\DoxyCodeLine{5 \textcolor{comment}{* @date 9/6/2022}}
+\DoxyCodeLine{6 \textcolor{comment}{* @brief Archivo de cabecera para la clase Lista}}
+\DoxyCodeLine{7 \textcolor{comment}{* @version 1.0}}
+\DoxyCodeLine{8 \textcolor{comment}{* }}
+\DoxyCodeLine{9 \textcolor{comment}{*@copyright Copyright (c) 2022,Diego Portilla -\/ Darwin Valdiviezo}}
+\DoxyCodeLine{10 \textcolor{comment}{*@license MIT License}}
+\DoxyCodeLine{11 \textcolor{comment}{*/}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_nodo_8h}{Nodo.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_cliente_8h}{Cliente.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{celular_8h}{Celular.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_lista}{Lista}} \{}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* \mbox{\hyperlink{class_lista_a13b9da8196af9e6bc2cb8d5cf698976d}{primero}};}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* \mbox{\hyperlink{class_lista_af996e4cd657296cd95a7edd56e501912}{ultimo}};}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* \mbox{\hyperlink{class_lista_ac2d3109fdc2174781270714840946517}{nuevoNodo}};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_lista_a123b088031f483f479418afb2a4661d8}{size}};}
+\DoxyCodeLine{29     \textcolor{comment}{//DEFINICIONES}}
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_lista_a9e74820e2d81e143c273992e563dffd3}{Lista}}();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_lista_a76f517b2be68b9e88b9480086cd7c52b}{estaVacia}}();}
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_lista_a1970f4bcda05bc8f943b78b2b3d3e3b6}{buscarCelular}}(\textcolor{keyword}{const} Type\&) \textcolor{keyword}{const};}
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_lista_adff6b28855dc89ed3c3b56879f47d281}{buscarCliente}}(\textcolor{keyword}{const} Type\&) \textcolor{keyword}{const};}
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_a3156d74e086483a4d3436e6f74c26fdd}{comprarCelular}}(\textcolor{keyword}{const} Type\&);}
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_a9fa2f5f899481f69dd4f7c836b124282}{venderCelular}}(\textcolor{keyword}{const} Type\&, \textcolor{keyword}{const} Type\&);}
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_ad0e382b0c823289e42e3b98a801b68c5}{imprimirCelular}}(\textcolor{keyword}{const} Type\&);}
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_ab4f6b6395459e5d88b5411ec5969741c}{imprimirVentas}}(\textcolor{keyword}{const} Type\&);}
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_a9fa2f5f899481f69dd4f7c836b124282}{venderCelular}}(\textcolor{keyword}{const} Type\&, \textcolor{keyword}{const} Type\&);}
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_a1e569644bdd1ac01449e332d4338727a}{modificarCelular}}(\textcolor{keyword}{const} Type\&);}
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_aea701b3decc91f50d16b7a6d8e27dd9f}{modificarCliente}}(\textcolor{keyword}{const} Type\&);}
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_acd55e267ae5af75464c3f9e15063a083}{eliminarCelular}}(\textcolor{keyword}{const} Type\&);}
+\DoxyCodeLine{95     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_lista_af0aac01557891e80d6ce429554e55dad}{getSize}}();}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     }
+\DoxyCodeLine{98 \};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{comment}{//IMPLEMENTACIONES}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{103 \mbox{\hyperlink{class_lista_a9e74820e2d81e143c273992e563dffd3}{Lista<Type>::Lista}}() \{}
+\DoxyCodeLine{104     this-\/>primero = NULL;}
+\DoxyCodeLine{105     this-\/>ultimo = NULL;}
+\DoxyCodeLine{106     this-\/>size = 0;}
+\DoxyCodeLine{107 \}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{110 \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_lista_a1970f4bcda05bc8f943b78b2b3d3e3b6}{Lista<Type>::buscarCelular}}(\textcolor{keyword}{const} Type\& datoBuscado)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{111     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* p;}
+\DoxyCodeLine{112     \textcolor{keywordtype}{bool} encontrado = \textcolor{keyword}{false};}
+\DoxyCodeLine{113     p = primero;}
+\DoxyCodeLine{114     \textcolor{keywordflow}{while} (!encontrado) \{}
+\DoxyCodeLine{115         \textcolor{keywordflow}{if} (p-\/>dato == datoBuscado)}
+\DoxyCodeLine{116             encontrado = \textcolor{keyword}{true};}
+\DoxyCodeLine{117         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{118             p = p-\/>siguiente;}
+\DoxyCodeLine{119     \}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121     \textcolor{keywordflow}{return} encontrado;}
+\DoxyCodeLine{122 \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{125 \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_lista_a76f517b2be68b9e88b9480086cd7c52b}{Lista<Type>::estaVacia}}() \{}
+\DoxyCodeLine{126     \textcolor{keywordflow}{return}(this-\/>primero == NULL);}
+\DoxyCodeLine{127 \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{130 \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_lista_adff6b28855dc89ed3c3b56879f47d281}{Lista<Type>::buscarCliente}}(\textcolor{keyword}{const} Type\& datoBuscado)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{131     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* p;}
+\DoxyCodeLine{132     \textcolor{keywordtype}{bool} encontrado = \textcolor{keyword}{false};}
+\DoxyCodeLine{133     p = primero;}
+\DoxyCodeLine{134     \textcolor{keywordflow}{while} (!encontrado) \{}
+\DoxyCodeLine{135         \textcolor{keywordflow}{if} (p-\/>dato == datoBuscado)}
+\DoxyCodeLine{136             encontrado = \textcolor{keyword}{true};}
+\DoxyCodeLine{137         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{138             p = p-\/>siguiente;}
+\DoxyCodeLine{139     \}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     \textcolor{keywordflow}{return} encontrado;}
+\DoxyCodeLine{142 \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{145 \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_lista_a76f517b2be68b9e88b9480086cd7c52b}{Lista<Type>::estaVacia}}() \{}
+\DoxyCodeLine{146     \textcolor{keywordflow}{return}(this-\/>primero == NULL);}
+\DoxyCodeLine{147 \}}
+\DoxyCodeLine{148 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{149 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista}{Lista<Type>::mostrar}}() \{}
+\DoxyCodeLine{150     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* p;}
+\DoxyCodeLine{151     p = primero;}
+\DoxyCodeLine{152     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++) \{}
+\DoxyCodeLine{153         cout << p-\/>dato << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{154         p = p-\/>siguiente;}
+\DoxyCodeLine{155     \}}
+\DoxyCodeLine{156     cout << endl;}
+\DoxyCodeLine{157     cout << \textcolor{stringliteral}{"{}Dimension de la lista: "{}} << size << endl;}
+\DoxyCodeLine{158 \}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{161 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_a3156d74e086483a4d3436e6f74c26fdd}{Lista<Type>::comprarCelular}}(\textcolor{keyword}{const} Type\& nuevoDato) \{}
+\DoxyCodeLine{162     nuevoNodo = \textcolor{keyword}{new} \mbox{\hyperlink{class_nodo}{Nodo<Type>}}(nuevoDato);}
+\DoxyCodeLine{163     nuevoNodo-\/>siguiente = primero;}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165     \textcolor{keywordflow}{if} (!estaVacia()) \{}
+\DoxyCodeLine{166         primero-\/>anterior = nuevoNodo;}
+\DoxyCodeLine{167         primero = nuevoNodo;}
+\DoxyCodeLine{168     \}}
+\DoxyCodeLine{169     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{170         primero = nuevoNodo;}
+\DoxyCodeLine{171         ultimo = nuevoNodo;}
+\DoxyCodeLine{172     \}}
+\DoxyCodeLine{173     size++;}
+\DoxyCodeLine{174 \}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{177 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_a9fa2f5f899481f69dd4f7c836b124282}{Lista<Type>::venderCelular}}(\textcolor{keyword}{const} Type\& nuevoDato, \textcolor{keyword}{const} Type\& dato) \{}
+\DoxyCodeLine{178     nuevoNodo = \textcolor{keyword}{new} \mbox{\hyperlink{class_nodo}{Nodo<Type>}}(nuevoDato);}
+\DoxyCodeLine{179     nuevoNodo-\/>siguiente = NULL;}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* p;}
+\DoxyCodeLine{182     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* q;}
+\DoxyCodeLine{183     p = primero;}
+\DoxyCodeLine{184     q = primero-\/>siguiente;}
+\DoxyCodeLine{185     \textcolor{keywordflow}{if} (estaVacia()) \{}
+\DoxyCodeLine{186         cout << \textcolor{stringliteral}{"{}Por favor agregar por cabeza o por cola antes: "{}} << endl;}
+\DoxyCodeLine{187     \}}
+\DoxyCodeLine{188     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{189         \textcolor{keywordtype}{bool} encontrado = \textcolor{keyword}{false};}
+\DoxyCodeLine{190         \textcolor{keywordflow}{while} (!encontrado) \{}
+\DoxyCodeLine{191             \textcolor{keywordflow}{if} (p-\/>dato == dato) \{}
+\DoxyCodeLine{192                 encontrado = \textcolor{keyword}{true};}
+\DoxyCodeLine{193                 \textcolor{keywordflow}{if} (q == primero) \{}
+\DoxyCodeLine{194                     p-\/>siguiente = nuevoNodo;}
+\DoxyCodeLine{195                     nuevoNodo-\/>anterior = p;}
+\DoxyCodeLine{196                     nuevoNodo-\/>siguiente = primero;}
+\DoxyCodeLine{197                     ultimo = nuevoNodo;}
+\DoxyCodeLine{198                 \}}
+\DoxyCodeLine{199                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{200                     p-\/>siguiente = nuevoNodo;}
+\DoxyCodeLine{201                     nuevoNodo-\/>anterior = p;}
+\DoxyCodeLine{202                     nuevoNodo-\/>siguiente = q;}
+\DoxyCodeLine{203                     q-\/>anterior = nuevoNodo;}
+\DoxyCodeLine{204                 \}}
+\DoxyCodeLine{205             \}}
+\DoxyCodeLine{206             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{207                 p = q;}
+\DoxyCodeLine{208                 q = q-\/>siguiente;}
+\DoxyCodeLine{209             \}}
+\DoxyCodeLine{210         \}}
+\DoxyCodeLine{211     \}}
+\DoxyCodeLine{212     size++;}
+\DoxyCodeLine{213 \}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{216 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_ad0e382b0c823289e42e3b98a801b68c5}{Lista<Type>::imprimirCelular}}(\textcolor{keyword}{const} Type\& dato) \{}
+\DoxyCodeLine{217     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* p;}
+\DoxyCodeLine{218     p = primero;}
+\DoxyCodeLine{219     \textcolor{keywordtype}{bool} encontrado = \textcolor{keyword}{false};}
+\DoxyCodeLine{220     \textcolor{keywordflow}{while} (!encontrado) \{}
+\DoxyCodeLine{221         \textcolor{keywordflow}{if} (p-\/>dato == dato) \{}
+\DoxyCodeLine{222             encontrado = \textcolor{keyword}{true};}
+\DoxyCodeLine{223             cout << p-\/>dato << endl;}
+\DoxyCodeLine{224         \}}
+\DoxyCodeLine{225         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{226             p = p-\/>siguiente;}
+\DoxyCodeLine{227     \}}
+\DoxyCodeLine{228 \}}
+\DoxyCodeLine{229 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{230 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_ab4f6b6395459e5d88b5411ec5969741c}{Lista<Type>::imprimirVentas}}(\textcolor{keyword}{const} Type\& dato) \{}
+\DoxyCodeLine{231     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* p;}
+\DoxyCodeLine{232     p = primero;}
+\DoxyCodeLine{233     \textcolor{keywordtype}{bool} encontrado = \textcolor{keyword}{false};}
+\DoxyCodeLine{234     \textcolor{keywordflow}{while} (!encontrado) \{}
+\DoxyCodeLine{235         \textcolor{keywordflow}{if} (p-\/>dato == dato) \{}
+\DoxyCodeLine{236             encontrado = \textcolor{keyword}{true};}
+\DoxyCodeLine{237             cout << p-\/>dato << endl;}
+\DoxyCodeLine{238         \}}
+\DoxyCodeLine{239         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{240             p = p-\/>siguiente;}
+\DoxyCodeLine{241     \}}
+\DoxyCodeLine{242 \}}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{245 \textcolor{keywordtype}{void} \mbox{\hyperlink{operaciones_8h_ad3adec250f0d3c0ac382b59800801d12}{lista<Type>::venderCelular}}(\textcolor{keyword}{const} Type\& nuevoDato, \textcolor{keyword}{const} Type\& dato) \{}
+\DoxyCodeLine{246     nuevoNodo = \textcolor{keyword}{new} \mbox{\hyperlink{class_nodo}{Nodo<Type>}}(nuevoDato);}
+\DoxyCodeLine{247     nuevoNodo-\/>siguiente = NULL;}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* p;}
+\DoxyCodeLine{250     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* q;}
+\DoxyCodeLine{251     p = primero;}
+\DoxyCodeLine{252     q = primero-\/>siguiente;}
+\DoxyCodeLine{253     \textcolor{keywordflow}{if} (estaVacia()) \{}
+\DoxyCodeLine{254         cout << \textcolor{stringliteral}{"{}Por favor agregar por cabeza o por cola antes: "{}} << endl;}
+\DoxyCodeLine{255     \}}
+\DoxyCodeLine{256     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{257         \textcolor{keywordtype}{bool} encontrado = \textcolor{keyword}{false};}
+\DoxyCodeLine{258         \textcolor{keywordflow}{while} (!encontrado) \{}
+\DoxyCodeLine{259             \textcolor{keywordflow}{if} (p-\/>dato == dato) \{}
+\DoxyCodeLine{260                 encontrado = \textcolor{keyword}{true};}
+\DoxyCodeLine{261                 \textcolor{keywordflow}{if} (q == primero) \{}
+\DoxyCodeLine{262                     p-\/>siguiente = nuevoNodo;}
+\DoxyCodeLine{263                     nuevoNodo-\/>anterior = p;}
+\DoxyCodeLine{264                     nuevoNodo-\/>siguiente = primero;}
+\DoxyCodeLine{265                     ultimo = nuevoNodo;}
+\DoxyCodeLine{266                 \}}
+\DoxyCodeLine{267                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{268                     p-\/>siguiente = nuevoNodo;}
+\DoxyCodeLine{269                     nuevoNodo-\/>anterior = p;}
+\DoxyCodeLine{270                     nuevoNodo-\/>siguiente = q;}
+\DoxyCodeLine{271                     q-\/>anterior = nuevoNodo;}
+\DoxyCodeLine{272                 \}}
+\DoxyCodeLine{273             \}}
+\DoxyCodeLine{274             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{275                 p = q;}
+\DoxyCodeLine{276                 q = q-\/>siguiente;}
+\DoxyCodeLine{277             \}}
+\DoxyCodeLine{278         \}}
+\DoxyCodeLine{279     \}}
+\DoxyCodeLine{280     size++;}
+\DoxyCodeLine{281 \}}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{284 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_a1e569644bdd1ac01449e332d4338727a}{Lista<Type>::modificarCelular}}(\textcolor{keyword}{const} Type\& nuevoDato) \{}
+\DoxyCodeLine{285     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* p;}
+\DoxyCodeLine{286     p = primero;}
+\DoxyCodeLine{287     \textcolor{keywordtype}{bool} encontrado = \textcolor{keyword}{false};}
+\DoxyCodeLine{288     \textcolor{keywordflow}{while} (!encontrado) \{}
+\DoxyCodeLine{289         \textcolor{keywordflow}{if} (p-\/>dato == nuevoDato) \{}
+\DoxyCodeLine{290             encontrado = \textcolor{keyword}{true};}
+\DoxyCodeLine{291             cout << \textcolor{stringliteral}{"{}Ingrese el nuevo dato: "{}};}
+\DoxyCodeLine{292             cin >> p-\/>dato;}
+\DoxyCodeLine{293         \}}
+\DoxyCodeLine{294         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{295             p = p-\/>siguiente;}
+\DoxyCodeLine{296     \}}
+\DoxyCodeLine{297     }
+\DoxyCodeLine{298 \}}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{301 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_aea701b3decc91f50d16b7a6d8e27dd9f}{Lista<Type>::modificarCliente}}(\textcolor{keyword}{const} Type\& nuevoDato) \{}
+\DoxyCodeLine{302     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* p;}
+\DoxyCodeLine{303     p = primero;}
+\DoxyCodeLine{304     \textcolor{keywordtype}{bool} encontrado = \textcolor{keyword}{false};}
+\DoxyCodeLine{305     \textcolor{keywordflow}{while} (!encontrado) \{}
+\DoxyCodeLine{306         \textcolor{keywordflow}{if} (p-\/>dato == nuevoDato) \{}
+\DoxyCodeLine{307             encontrado = \textcolor{keyword}{true};}
+\DoxyCodeLine{308             cout << \textcolor{stringliteral}{"{}Ingrese el nuevo dato: "{}};}
+\DoxyCodeLine{309             cin >> p-\/>dato;}
+\DoxyCodeLine{310         \}}
+\DoxyCodeLine{311         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{312             p = p-\/>siguiente;}
+\DoxyCodeLine{313     \}}
+\DoxyCodeLine{314 \}}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{317 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lista_acd55e267ae5af75464c3f9e15063a083}{Lista<Type>::eliminarCelular}}(\textcolor{keyword}{const} Type\& datoBuscado) \{}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{319     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* p;}
+\DoxyCodeLine{320     \mbox{\hyperlink{class_nodo}{Nodo<Type>}}* q;}
+\DoxyCodeLine{321     p = primero;}
+\DoxyCodeLine{322     q = primero-\/>siguiente;}
+\DoxyCodeLine{323     \textcolor{keywordtype}{bool} encontrado = \textcolor{keyword}{false};}
+\DoxyCodeLine{324     \textcolor{keywordflow}{if} (primero == NULL) \{}
+\DoxyCodeLine{325         cout << \textcolor{stringliteral}{"{}No se puede borrar una lista vacia"{}} << endl;}
+\DoxyCodeLine{326     \}}
+\DoxyCodeLine{327     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{328         \textcolor{keywordflow}{while} (!encontrado) \{}
+\DoxyCodeLine{329             \textcolor{keywordflow}{if} (q-\/>dato == datoBuscado) \{}
+\DoxyCodeLine{330                 encontrado = \textcolor{keyword}{true};}
+\DoxyCodeLine{331                 \textcolor{keywordflow}{if} (q-\/>siguiente = primero) \{}
+\DoxyCodeLine{332                     p-\/>siguiente = primero;}
+\DoxyCodeLine{333                     ultimo = p;}
+\DoxyCodeLine{334                 \}}
+\DoxyCodeLine{335                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{336                     p-\/>siguiente = q-\/>siguiente;}
+\DoxyCodeLine{337                     q-\/>siguiente-\/>anterior = p;}
+\DoxyCodeLine{338                 \}}
+\DoxyCodeLine{339             \}}
+\DoxyCodeLine{340             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{341                 p = q;}
+\DoxyCodeLine{342                 q = q-\/>siguiente;}
+\DoxyCodeLine{343             \}}
+\DoxyCodeLine{344         \}}
+\DoxyCodeLine{345         \textcolor{keyword}{delete} q;}
+\DoxyCodeLine{346     \}}
+\DoxyCodeLine{347     size-\/-\/;}
+\DoxyCodeLine{348 \}}
+\DoxyCodeLine{349 }
+\DoxyCodeLine{350 \textcolor{keyword}{template} <\textcolor{keyword}{class} Type>}
+\DoxyCodeLine{351 \textcolor{keywordtype}{int} \mbox{\hyperlink{class_lista_af0aac01557891e80d6ce429554e55dad}{Lista<Type>::getSize}}() \{}
+\DoxyCodeLine{352     \textcolor{keywordflow}{return} this-\/>size;}
+\DoxyCodeLine{353 \}}
+
+\end{DoxyCode}

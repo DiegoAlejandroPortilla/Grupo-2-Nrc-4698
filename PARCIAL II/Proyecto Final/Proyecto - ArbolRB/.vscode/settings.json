@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "xstring": "cpp",
+        "type_traits": "cpp",
+        "iostream": "cpp",
+        "xlocale": "cpp",
+        "ostream": "cpp",
+        "xiosbase": "cpp",
+        "chrono": "cpp",
+        "thread": "cpp"
+    }
+}

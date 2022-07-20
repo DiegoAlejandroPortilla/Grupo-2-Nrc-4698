@@ -1,0 +1,67 @@
+\hypertarget{backupfunctions_8cpp}{}\doxysection{backupfunctions.\+cpp File Reference}
+\label{backupfunctions_8cpp}\index{backupfunctions.cpp@{backupfunctions.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$direct.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}backupfunctions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}constants.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}commonfunctions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{backupfunctions_8cpp_aa815eb77583cc55cc66fae32bff198e0}{backup}} (char $\ast$folder\+\_\+name, char $\ast$source\+\_\+path, char $\ast$destination\+\_\+path, char $\ast$info\+\_\+folder\+\_\+path)
+\item 
+void \mbox{\hyperlink{backupfunctions_8cpp_afb37e82548ec73a6de94c81927cdd399}{copy\+\_\+file}} (char $\ast$file\+\_\+name, char $\ast$source\+\_\+path, char $\ast$destination\+\_\+path, char $\ast$folder\+\_\+name, char $\ast$info\+\_\+folder\+\_\+path)
+\item 
+void \mbox{\hyperlink{backupfunctions_8cpp_a7d30b7aee3ebf42e1ae3049d50223d8e}{create\+\_\+meta\+\_\+file}} (char $\ast$timbuf, char $\ast$meta\+\_\+file\+\_\+location, int choice)
+\item 
+void \mbox{\hyperlink{backupfunctions_8cpp_a0ff26224aa9c7efa2e45ac6244f1be8a}{get\+\_\+modified\+\_\+time\+\_\+of\+\_\+the\+\_\+source\+\_\+file}} (char $\ast$file\+\_\+name\+\_\+with\+\_\+source\+\_\+path, char $\ast$timbuf)
+\item 
+void \mbox{\hyperlink{backupfunctions_8cpp_a5a116eae49f067dd8e216ab124d4d86d}{copy\+\_\+source\+\_\+file\+\_\+to\+\_\+the\+\_\+destination}} (char $\ast$file\+\_\+name, char $\ast$file\+\_\+name\+\_\+with\+\_\+source\+\_\+path, char $\ast$file\+\_\+name\+\_\+with\+\_\+destination\+\_\+path)
+\item 
+void \mbox{\hyperlink{backupfunctions_8cpp_a0c0b29456056b86107581d5e84bd4487}{get\+\_\+meta\+\_\+info\+\_\+from\+\_\+the\+\_\+meta\+\_\+file}} (char $\ast$meta\+\_\+file\+\_\+location, char $\ast$ftimbuf)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{backupfunctions_8cpp_aa815eb77583cc55cc66fae32bff198e0}\label{backupfunctions_8cpp_aa815eb77583cc55cc66fae32bff198e0}} 
+\index{backupfunctions.cpp@{backupfunctions.cpp}!backup@{backup}}
+\index{backup@{backup}!backupfunctions.cpp@{backupfunctions.cpp}}
+\doxysubsubsection{\texorpdfstring{backup()}{backup()}}
+{\footnotesize\ttfamily void backup (\begin{DoxyParamCaption}\item[{char $\ast$}]{folder\+\_\+name,  }\item[{char $\ast$}]{source\+\_\+path,  }\item[{char $\ast$}]{destination\+\_\+path,  }\item[{char $\ast$}]{info\+\_\+folder\+\_\+path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{backupfunctions_8cpp_afb37e82548ec73a6de94c81927cdd399}\label{backupfunctions_8cpp_afb37e82548ec73a6de94c81927cdd399}} 
+\index{backupfunctions.cpp@{backupfunctions.cpp}!copy\_file@{copy\_file}}
+\index{copy\_file@{copy\_file}!backupfunctions.cpp@{backupfunctions.cpp}}
+\doxysubsubsection{\texorpdfstring{copy\_file()}{copy\_file()}}
+{\footnotesize\ttfamily void copy\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+\_\+name,  }\item[{char $\ast$}]{source\+\_\+path,  }\item[{char $\ast$}]{destination\+\_\+path,  }\item[{char $\ast$}]{folder\+\_\+name,  }\item[{char $\ast$}]{info\+\_\+folder\+\_\+path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{backupfunctions_8cpp_a5a116eae49f067dd8e216ab124d4d86d}\label{backupfunctions_8cpp_a5a116eae49f067dd8e216ab124d4d86d}} 
+\index{backupfunctions.cpp@{backupfunctions.cpp}!copy\_source\_file\_to\_the\_destination@{copy\_source\_file\_to\_the\_destination}}
+\index{copy\_source\_file\_to\_the\_destination@{copy\_source\_file\_to\_the\_destination}!backupfunctions.cpp@{backupfunctions.cpp}}
+\doxysubsubsection{\texorpdfstring{copy\_source\_file\_to\_the\_destination()}{copy\_source\_file\_to\_the\_destination()}}
+{\footnotesize\ttfamily void copy\+\_\+source\+\_\+file\+\_\+to\+\_\+the\+\_\+destination (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+\_\+name,  }\item[{char $\ast$}]{file\+\_\+name\+\_\+with\+\_\+source\+\_\+path,  }\item[{char $\ast$}]{file\+\_\+name\+\_\+with\+\_\+destination\+\_\+path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{backupfunctions_8cpp_a7d30b7aee3ebf42e1ae3049d50223d8e}\label{backupfunctions_8cpp_a7d30b7aee3ebf42e1ae3049d50223d8e}} 
+\index{backupfunctions.cpp@{backupfunctions.cpp}!create\_meta\_file@{create\_meta\_file}}
+\index{create\_meta\_file@{create\_meta\_file}!backupfunctions.cpp@{backupfunctions.cpp}}
+\doxysubsubsection{\texorpdfstring{create\_meta\_file()}{create\_meta\_file()}}
+{\footnotesize\ttfamily void create\+\_\+meta\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{timbuf,  }\item[{char $\ast$}]{meta\+\_\+file\+\_\+location,  }\item[{int}]{choice }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{backupfunctions_8cpp_a0c0b29456056b86107581d5e84bd4487}\label{backupfunctions_8cpp_a0c0b29456056b86107581d5e84bd4487}} 
+\index{backupfunctions.cpp@{backupfunctions.cpp}!get\_meta\_info\_from\_the\_meta\_file@{get\_meta\_info\_from\_the\_meta\_file}}
+\index{get\_meta\_info\_from\_the\_meta\_file@{get\_meta\_info\_from\_the\_meta\_file}!backupfunctions.cpp@{backupfunctions.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_meta\_info\_from\_the\_meta\_file()}{get\_meta\_info\_from\_the\_meta\_file()}}
+{\footnotesize\ttfamily void get\+\_\+meta\+\_\+info\+\_\+from\+\_\+the\+\_\+meta\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{meta\+\_\+file\+\_\+location,  }\item[{char $\ast$}]{ftimbuf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{backupfunctions_8cpp_a0ff26224aa9c7efa2e45ac6244f1be8a}\label{backupfunctions_8cpp_a0ff26224aa9c7efa2e45ac6244f1be8a}} 
+\index{backupfunctions.cpp@{backupfunctions.cpp}!get\_modified\_time\_of\_the\_source\_file@{get\_modified\_time\_of\_the\_source\_file}}
+\index{get\_modified\_time\_of\_the\_source\_file@{get\_modified\_time\_of\_the\_source\_file}!backupfunctions.cpp@{backupfunctions.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_modified\_time\_of\_the\_source\_file()}{get\_modified\_time\_of\_the\_source\_file()}}
+{\footnotesize\ttfamily void get\+\_\+modified\+\_\+time\+\_\+of\+\_\+the\+\_\+source\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+\_\+name\+\_\+with\+\_\+source\+\_\+path,  }\item[{char $\ast$}]{timbuf }\end{DoxyParamCaption})}
+

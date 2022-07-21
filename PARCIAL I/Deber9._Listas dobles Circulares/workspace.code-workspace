@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\codigo del profeshor"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp",
+			"ostream": "cpp"
+		}
+	}
+}

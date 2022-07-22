@@ -351,7 +351,6 @@ void ArbolRN :: printTree(const string& prefix, Nodo* p, bool isLeft, string out
 
         }
 }
-
 void ArbolRN :: insert(int val){
         Nodo* p = new Nodo(val);
         root = insertValue(root, p);
@@ -418,10 +417,9 @@ void ArbolRN :: saveTreeBin(){
     saveTreeBin(root);
 }
 
-void ArbolRN :: saveTreehtml(){
-    saveTreehtml(root);
+void ArbolRN :: saveTxtData(){
+    saveTxtData(root);
 }
-
 
 
 void ArbolRN ::print(){
@@ -527,49 +525,27 @@ void ArbolRN :: saveTreeBin(Nodo* p){
         archivodat.close();
     }
 }
-void ArbolRN :: saveTreehtml(Nodo* p){
-    ofstream archivo;
-    archivo.open("Datos_del_arbol.html");
-    archivo<<"<!DOCTYPE html>"<<endl;
-    archivo<<"<html>"<<endl;
-    archivo<<"<head>"<<endl;
-    archivo<<"<title>Datos del Arbol Rojo-Negro</title>"<<endl;
-    archivo<<"</head>"<<endl;
-    archivo<<"<body>"<<endl;
-    archivo<<"<h1>Datos del Arbol Rojo-Negro</h1>"<<endl;
-    archivo<<"</tr>"<<endl;
-    archivo<<"<table>"<<endl;
-    archivo<<"<tr>"<<endl;
-    archivo<<"<th>Valor ingresado</th>"<<endl;
-    archivo<<"<th>Color</th>"<<endl;
-    archivo<<"<th>Informacion</th>"<<endl;
-    archivo<<"</tr>"<<endl;
+void ArbolRN :: saveTxtData(Nodo* p){
     if (p == nullptr){
+        return;
         cout << "No se encuentran datos en el arbol, \narbol vacio...\n";
     }else{
-        if (p->parent == nullptr){
-                archivo<<"<tr>"<<endl;
-                archivo<<"<td>"<<p->data<<"</td>"<<endl;
-                archivo<<"<td>"<<(p->color ? "(NEGRO)" : "(ROJO)")<<"</td>"<<endl;
-                archivo<<"<td>"<<"Raiz Principal"<<"</td>"<<endl;
-        }else if (p->parent->left == p){
-                archivo<<"<tr>"<<endl;
-                archivo<<"<td>"<<p->data<<"</td>"<<endl;
-                archivo<<"<td>"<<(p->color ? "(NEGRO)" : "(ROJO)") <<"</td>"<<endl;
-                archivo<<"<td>"<<"Hijo izquierdo de " << p->parent->data << (p->parent->color ? "(NEGRO)" : "(ROJO)")<<"</td>"<<endl;
-        }else if (p->parent->left == p){
-                archivo<<"<tr>"<<endl;
-                archivo<<"<td>"<< p->data<<"</td>"<<endl;
-                archivo<<"<td>"<<(p->color ? "(NEGRO)" : "(ROJO)") <<"</td>"<<endl;
-                archivo<<"<td>"<<"Hijo derecho de " << p->parent->data  << (p->parent->color ? "(NEGRO)" : "(ROJO)")<<"</td>"<<endl; 
-            saveTreehtml(p->left);
-            saveTreehtml(p->right);
+        ofstream archivo;
+        archivo.open("Datos.txt", ios::app | ios::out);
+        if (archivo.fail()){
+            cout << "No se pudo abrir el archivo";
+            exit(1);
+        }else{
+            if (p->parent == nullptr)
+            archivo << p->data << "-";
+        else if (p->parent->left == p)
+            archivo << p->data << "-";
+        else
+            archivo << p->data<< "-";
+            saveTxtData(p->left);
+            saveTxtData(p->right);
         }
+        archivo.close();
     }
-    archivo<<"</tr>"<<endl; 
-    archivo<<"</table>"<<endl;
-    archivo<<"</body>"<<endl;
-    archivo<<"</html>"<<endl;
-    archivo.close();
-    
+
 }

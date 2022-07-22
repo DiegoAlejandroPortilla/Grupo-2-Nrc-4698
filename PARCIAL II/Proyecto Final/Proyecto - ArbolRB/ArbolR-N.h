@@ -154,7 +154,7 @@ private:
      * @return Nodo* 
      * @param Nodo* 
      */
-    void saveTreehtml(Nodo* );
+    void saveTxtData(Nodo* );
 public:
     /**
      * @brief Construct a new ArbolRN object
@@ -218,7 +218,7 @@ public:
      * @brief method load tree from html file
      * 
      */
-    void saveTreehtml();
+    void saveTxtData();
     /**
      * @brief destructor
      * 

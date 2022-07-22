@@ -24,6 +24,13 @@ Tema: Arbol Rojo Negro - Proyecto Segundo Parcial
 #include "registro.h"
 #include "Input.h"
 #include "Input.cpp"
+#include "metrics.h"
+#include "metrics.cpp"
+#include "pdf.h"
+#include "pdf.cpp"
+#include "Generar.h"
+#include "Generar.cpp"
+
 
 
 using namespace std;
@@ -76,7 +83,7 @@ int main()
     std::thread t2(marquee, test);
     t2.detach();
 	ArbolRN RBTree;
-	registro();
+	//registro();
 	menu(RBTree);
 	return 0;
 }
@@ -286,18 +293,18 @@ void extrasMenu(ArbolRN RBTree){
         system("cls");
         RBTree.saveTreeTxt();
 		RBTree.saveTreeBin();
+		RBTree.saveTxtData();
         cout << "\n\nGuardado con exito , los archivos se abriran enseguida , por favor espere" << endl;
 		system("ArbolRN.txt");
 		system("ArbolRN.dat");
-        system ("pause");
         return 0;
     }));
     m.add_option(MenuOption("  |\t2. Guardar en Pdf		    |", [&](MenuOptionArguments args) {
+		Generar p;
         system("cls");  
-        cout << "\n\nGuardado con exito" << endl;
-		RBTree.saveTreehtml();
-		system("Datos_del_arbol.html");
-        system ("pause");
+		p.generarPDF("ArbolRB.pdf");
+		cout << "\n\nGuardado con exito , el archivo se abriran enseguida , por favor espere" << endl;
+		system ("ArbolRB.pdf");
         return 0;
     }));
     m.add_option(MenuOption("  |\t3. Foto pixelada 		    |", [&](MenuOptionArguments args) {
@@ -308,7 +315,7 @@ void extrasMenu(ArbolRN RBTree){
     m.add_option(MenuOption("  |\t4. Backup     			    |", [&](MenuOptionArguments args) {
         system("cls");
         cout << "\n\nBienvenido a Backup" << endl;
-        system("Backup.exe");
+        //system("Backup.exe");
         return 0;
     }));
     m.add_option(MenuOption("  |\t5. Regresar	     		    |", [&](MenuOptionArguments args) {

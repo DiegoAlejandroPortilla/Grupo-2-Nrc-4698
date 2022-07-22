@@ -1,0 +1,3 @@
+8(NEGRO) es raiz principal
+7(ROJO) es Hijo izquierdo de 8(NEGRO)
+12(ROJO) es Hijo derecho de 8(NEGRO)
